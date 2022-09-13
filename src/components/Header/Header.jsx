@@ -11,8 +11,8 @@ const Header = () => {
       </div>
       <div className={styles.nav_top}>
         <ul>
-          <li>About</li>
-          <li>Menu</li>
+          <li>cars</li>
+          <li>profile</li>
           <li>Service</li>
           <li>Pages</li>
           <li>Main</li>
