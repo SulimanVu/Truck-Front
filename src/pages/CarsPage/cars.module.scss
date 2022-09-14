@@ -1,0 +1,108 @@
+.wrapper {
+    p {
+    font-size: 31px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: black;
+    line-height: 1.35em;
+    
+    }
+    
+    span {
+        bottom: 0;
+        left: 0;
+        width: 170px;
+    }
+}
+.filter li {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    border: 1px solid #e7e7ee;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    box-sizing: border-box;
+    a {
+        opacity: 1;
+    }
+}
+.headline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Настройка цвета и прозрачности для блока с заголовком */
+    transition: background 0.5s ease;
+}
+.onecard img {
+    width: 100%;
+    height: 100%;
+}
+.onecard:hover .headline {
+display: block;
+background: rgba(0, 0, 0, 0.75);
+}
+.title {
+    position: absolute;
+  width: 100%;
+  left: 0;
+  top: 25%; /* Отступ сверху */
+  font-size: 1.900em; /* Размер текста заголовка */
+  text-align: center;
+  text-transform: uppercase; /* Заглавные буквы */
+  color: white; /* Цвет заголовка */
+  z-index: 1;
+  transition: top .5s ease;
+}
+.cards {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+.onecard {
+display: flex;
+background-repeat: no-repeat;
+border-image-width: 500px;
+box-sizing: border-box;
+position: relative;
+width: 100%;
+height: 350px;
+margin: 10px 15px;
+
+}
+.onecard:hover .title {
+    top: 10%;
+}
+
+.btnSeeMore {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: 65%; /* Отступ сверху */
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+  .btnSeeMore a {
+    border-radius: 4px;
+    background-color: #1874c1;
+    color: #ffffff;
+    background: linear-gradient(to top, #1874c1, #0b7b8f);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    color: #ffffff !important;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .onecard:hover .btnSeeMore {
+    opacity: 1;
+    z-index: 1;
+  }
