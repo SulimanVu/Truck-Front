@@ -7,24 +7,30 @@ import { fetchCar } from '../../features/carSlice';
 
 const OneCar = () => {
 
-    // const {id} = useParams()
+    const {id} = useParams()
 
-    // const car = useSelector(state => state.car.car.filter(item => {
-    //     if (!id) return true;
+    const car = useSelector((state) => state.car.car.filter(item => {
+    
+        return id === item._id
+    }))
 
-    //     return id === item._id
-    // }))
+    console.log(car);
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-    // useEffect(()=> {
-    //     dispatch(fetchCar)
-    // }, [dispatch])
+    useEffect(()=> {
+        dispatch(fetchCar())
+    }, [dispatch])
 
     let num = 2333;
     return (
         <div>
-            <div className={styles.img_block}><img src="https://rating-avto.ru/wp-content/uploads/2021/05/luchshie-gruzoviki-v-mire.jpg" alt=""  className={styles.img}/></div>
+           {car.map(el => {
+            return (
+                <div>{el.name} </div>
+            )
+           })}
+            {/* <div className={styles.img_block}><img src="https://rating-avto.ru/wp-content/uploads/2021/05/luchshie-gruzoviki-v-mire.jpg" alt=""  className={styles.img}/></div>
             <div className={styles.container}>
                 <div className={styles.cargo_container}>
                         <img src="https://cdn-icons-png.flaticon.com/128/28/28326.png" alt="" className={styles.cargo_img}/>
@@ -34,10 +40,10 @@ const OneCar = () => {
 
                 <div>
                     <img src="" alt="" />
-                </div>
+                </div> */}
                 <div>
                  
-                </div>
+                {/* </div> */}
             </div>
         </div>
     );

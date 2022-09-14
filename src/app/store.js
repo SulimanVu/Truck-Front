@@ -7,6 +7,6 @@ export const store = configureStore({
   reducer: {
     // application,
     // request,
-    // car,
+    car,
   },
 });
