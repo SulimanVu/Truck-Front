@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./header.module.scss";
 import logo from "../../public/logo_2.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,11 +11,21 @@ const Header = () => {
       </div>
       <div className={styles.nav_top}>
         <ul>
-          <li>cars</li>
-          <li>profile</li>
-          <li>Service</li>
-          <li>Pages</li>
-          <li>Main</li>
+          <Link to="/cars" className={styles.link}>
+            <li>cars</li>
+          </Link>
+          <Link to="/user/:id" className={styles.link}>
+            <li>profile</li>
+          </Link>
+          <Link to="/cars" className={styles.link}>
+            <li>Service</li>
+          </Link>
+          <Link to="/about" className={styles.link}>
+            <li>about us</li>
+          </Link>
+          <Link to="/" className={styles.link}>
+            <li>Main</li>
+          </Link>
         </ul>
       </div>
     </header>

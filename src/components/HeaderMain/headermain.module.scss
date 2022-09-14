@@ -42,23 +42,13 @@ header{
 li{
     text-transform: uppercase;
     font-weight: 500;
+    padding-bottom: 5px;
+    box-sizing: border-box;
     color: #fff;
     transition: 0.2s;
     cursor: pointer;
-    &::after{
-        content: '';
-        position: absolute;
-        top: 62px;
-        display: block;
-        width: 4%;
-        height: 1.5px;
-        background-color: #fff;
-        opacity: 0;
-        transition: ease-in opacity 0.5s;
-        transition-delay: .2s;
-    }
-    &:hover::after{
-        opacity: 1;
-        transition-delay: .1s;
+    &:hover{
+        margin-bottom: 5px;
+        border-bottom: 2px solid #01c38d;
     }
 }
