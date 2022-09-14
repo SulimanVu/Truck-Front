@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Mainpage from "./pages/MainPage/Main";
@@ -8,6 +9,7 @@ import FormRegistration from "./pages/FormRegistration/FormRegistration";
 import About from "./pages/About/About";
 // import CarsPage from './pages/CarsPage/CarsPage'
 // import OneCar from './pages/OnePage/OnePage'
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       </Routes>
       <Footer />
     </>
+
   );
 }
 
