@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./header.module.scss";
+import styles from "./headermain.module.scss";
 import logo from "../../public/logo_2.png";
 
-const Header = () => {
+const HeaderMain = () => {
   return (
-    <header className={styles.header}>
+    <header>
       <div className={styles.logo}>
         <img alt="#" src={logo} />
       </div>
@@ -21,4 +21,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderMain;
