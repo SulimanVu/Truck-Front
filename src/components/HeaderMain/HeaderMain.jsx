@@ -7,7 +7,9 @@ const HeaderMain = () => {
   return (
     <header>
       <div className={styles.logo}>
-        <img alt="#" src={logo} />
+        <Link to="/">
+          <img alt="#" src={logo} />
+        </Link>
       </div>
       <div className={styles.nav_top}>
         <ul>

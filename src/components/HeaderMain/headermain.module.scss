@@ -4,11 +4,12 @@
 header{
     position: absolute;
     width: 100%;
-    padding: 10px 0 5px;
+    padding: 5px 0 5px;
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #355b7d71;
         .logo{
             width: 100px;
             height: 80px;
@@ -35,6 +36,9 @@ header{
                 list-style-type: none;
                 justify-content: space-between;
                 margin-right: 15%;
+                .link{
+                    text-decoration: none;
+                }
             }
         }
 }

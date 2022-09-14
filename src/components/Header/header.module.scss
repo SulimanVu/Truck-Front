@@ -46,6 +46,7 @@ li{
     transition: 0.1s;
     cursor: pointer;
     &:hover{
+        margin-bottom: 5px;
         border-bottom: 2px solid #01c38d;
     }
 }
