@@ -1,60 +1,75 @@
 footer {
-    width: 100%;
-    background: rgba(181, 181, 184, 0.344);
-  
-    .general {
-      margin-left: 35%;
-      display: flex;
+  width: 100%;
+  background: rgba(181, 181, 184, 0.344);
+  border-top: 1px solid #999;
+
+
+  .general {
+    // margin-left: 35%;
+    display: flex;
+    // margin-top: 30px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 80px;
+    // margin-bottom: 25px;
+    display: flex;
+    margin-left: 5%;
+
+    img {
+      height: 100%;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        scale: 1.2;
+      }
+    }
+    p {
       margin-top: 30px;
     }
-  
-    .logo {
-      width: 100px;
-      height: 80px;
-      margin-bottom: 25px;
-      display: flex;
-  
-      img {
-        height: 100%;
-        transition: 0.3s;
-        cursor: pointer;
-        &:hover {
-          scale: 1.2;
-        }
-      }
-      p {
-        margin-top: 30px;
-      }
-    }
-  
-    .location {
-      width: 100px;
-      height: 80px;
-      margin-top: 25px;
-      margin-left: 20%;
-      display: flex;
-      font-size: 13px;
-    }
-  
-    .contact {
-      font-size: 13px;
-      width: 100px;
-      height: 80px;
-      margin-top: 25px;
-      margin-left: 5%;
-      display: flex;
-      font-size: 13px;
-    }
-  
-    .dno {
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .dno > p {
-      font-size: 13px;
-      font-weight: 300;
+  }
+
+  .location {
+    width: 100px;
+    height: 80px;
+    margin-top: 25px;
+    margin-left: 60%;
+    display: flex;
+    font-size: 13px;
+    
+    img{
+      width: 30px;
+      height: 30px;
     }
   }
-  
+
+  .contact {
+    font-size: 13px;
+    width: 10px;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 5%;
+    display: flex;
+    font-size: 13px;
+    img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    margin-top: 4px;
+    }
+  }
+
+  .dno {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .dno > p {
+    font-size: 13px;
+    font-weight: 300;
+    
+  }
+}
