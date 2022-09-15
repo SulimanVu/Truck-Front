@@ -10,8 +10,26 @@
 
 .container {
     display: flex;
+    
 }
 
+
+.img_container {
+    width: 50%;
+    background-color: #999;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    
+}
+.img {
+    width: 720px;
+    max-height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); 
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        &:hover{
+            filter: grayscale(0); 
+    }
+}
 .cargo_container {
     display: flex;
 }
@@ -24,4 +42,117 @@
 .fridge_img {
     width: 80px;
     height: 80px;
+}
+
+.description_container {
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    clip-path: polygon(100.00% 0.22%,100% 50%,100.00% 100%,0% 100%,25.00% 53.04%,0% 0%);
+}
+
+.name {
+    margin-top: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.loadCapcity_block {
+    display: flex;
+    margin-top: 15px;
+}
+
+.loadCapcity {
+    width: 25px;
+    height: 25px;
+    margin-left: 150px;
+    background-color: #fff;
+    -webkit-filter: invert(100%);
+}
+
+.str {
+    margin-top: 4px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+
+.frigde_img {
+    width: 25px;
+    height: 25px;
+    margin-left: 240px;
+    background-color: #fff;
+    -webkit-filter: invert(100%);
+}
+
+
+.frigde_block {
+    display: flex;
+    margin-top: 25px;
+}
+
+.frigde_txt {
+    margin-top: 3px;
+    margin-left: 4px;
+    color: #fff;
+}
+
+.carTransportet_block {
+    display: flex;
+}
+
+.carTransportet_img {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 210px;
+    background-color: #fff;
+    -webkit-filter: invert(100%);
+}
+
+.carTransportet_txt {
+    margin-top: 14px;
+    margin-left: 4px;
+    color: #fff;
+}
+
+
+.width_block {
+    display: flex;
+    margin-top: 15px;
+}
+
+
+.width_img {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 180px;
+    background-color: #fff;
+    -webkit-filter: invert(100%);
+}
+
+.width_txt {
+    margin-top: 14px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.height_block {
+    display: flex;
+    margin-top: 15px;
+}
+
+.height_img {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 210px;
+    background-color: #fff;
+    -webkit-filter: invert(100%);
+}
+
+.height_txt {
+    margin-top: 14px;
+    margin-left: 5px;
+    color: #fff;
 }

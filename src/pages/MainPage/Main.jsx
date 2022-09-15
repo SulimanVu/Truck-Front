@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./main.module.scss";
 import MainBlock from "../../components/MainBlocks/MainBlock";
+import HeaderMain from "../../components/HeaderMain/HeaderMain"
 
 const Main = () => {
   return (
     <>
+      <HeaderMain />
       <section className={styles.main_img}>
         <div className={styles.container}>
           <div className={styles.text_block}>

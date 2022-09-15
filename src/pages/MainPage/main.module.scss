@@ -1,6 +1,17 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+body::-webkit-scrollbar {
+    width: 6px;               /* ширина всей полосы прокрутки */
+  }
+body::-webkit-scrollbar-track {
+    background: #fff;        /* цвет зоны отслеживания */
+  }
+body::-webkit-scrollbar-thumb {
+    background-color: white;    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 5px solid rgba(2, 2, 84, 0.737);  /* отступ вокруг бегунка */
+  }
 .main_img{
     width: 100%;
     height: 86vh;

@@ -6,7 +6,9 @@ import request from '../features/requestSlice'
 export const store = configureStore({
   reducer: {
     // application,
+
     // request,
     car,
+
   },
 });
