@@ -6,9 +6,10 @@ import category from '../features/categorySlice'
 
 export const store = configureStore({
   reducer: {
-    // application,
+    application,
     request,
     car,
     category,
+
   },
 });
