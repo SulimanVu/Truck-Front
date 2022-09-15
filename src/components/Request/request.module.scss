@@ -1,9 +1,51 @@
 .request{
-    width: 500px;
+    width: 90%;
+    height: 80vh;
+    display: flex;
     margin: auto;
+    margin-top: 40px;
     .map{
-        height: 500px;
+        width: 50%;
+        height: 400px;
         background-color: red;
         text-align: center;
+    }
+    .info{
+        display: flex;
+        width: 80%;
+        height: fit-content;
+        margin-left: 5%;
+        background-color: #355c7d;
+        color: #fff;
+        font-weight: 300;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        .text{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 5%;
+            & div:nth-child(1){
+                font-weight: 600;
+                color: #01c38d;
+                font-size: 15px;
+            }
+            div{
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+        }
+        .img{
+            max-height: 80%;
+            max-width: 45%;
+            object-fit: cover;
+            display: flex;
+            img{
+                border-radius: 3px;
+                align-self: center;
+                width: 100%;
+            }
+        }
     }
 }
