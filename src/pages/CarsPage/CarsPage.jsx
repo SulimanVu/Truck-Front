@@ -4,6 +4,7 @@ import styles from "../CarsPage/cars.module.scss";
 import { fetchCar } from "../../features/carSlice";
 import { useSelector } from "react-redux/es/exports";
 import {Link, useParams} from 'react-router-dom'
+
 import { fetchCategory } from "../../features/categorySlice";
 import Header from "../../components/Header/Header";
 
