@@ -47,8 +47,9 @@
     color: bisque;
     background-image: url(https://cdn-icons-png.flaticon.com/512/2698/2698198.png);
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding-left:60px;;
+    background-size: 28px;
+    background-position: 0 center;
+    padding-left:40px;
 }
 
 .input2 {
@@ -63,8 +64,9 @@
     color: bisque;
     background-image: url(https://cdn-icons-png.flaticon.com/512/8051/8051300.png);
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding-left:60px;;
+    background-size: 30px;
+    background-position: 0 center;
+    padding-left:40px;
 }
 
 .input3 {
@@ -79,8 +81,9 @@
     color: bisque;
     background-image: url(https://cdn-icons-png.flaticon.com/512/7422/7422027.png);
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding-left:60px;;
+    background-size: 30px;
+    background-position: 0 center;
+    padding-left:40px;
 }
 
 .input4 {
@@ -95,8 +98,9 @@
     color: bisque;
     background-image: url(https://cdn-icons-png.flaticon.com/512/7211/7211037.png);
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding-left:60px;;
+    background-size: 30px;
+    background-position: 0 center;
+    padding-left:40px;
 }
 
 .input5 {
@@ -111,8 +115,9 @@
     color: bisque;
     background-image: url(https://cdn-icons-png.flaticon.com/512/7558/7558336.png);
     background-repeat: no-repeat;
-    background-size: 40px;
-    padding-left:60px;;
+    background-size: 30px;
+    background-position: 0 center;
+    padding-left:40px;
 }
 
 
@@ -123,6 +128,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    filter: invert(100%);
 }
 
 .title {
@@ -134,10 +140,16 @@
 }
 
 .btn {
+    cursor: pointer;
     margin-top: 20px;
    padding: 10px 40px; 
    font-weight: bold;
     font-size: 20px;
     border-radius: 100px;
     border: none;
+    transition: .3s;
+    &:hover{
+        background-color: #359999;
+        color: #fff;
+    }
 }
