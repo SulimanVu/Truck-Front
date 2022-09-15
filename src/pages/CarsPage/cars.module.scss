@@ -1,49 +1,30 @@
 .wrapper {
-    p {
+    background-image: url('../../public/two_bg.jpg');
+    width: 100%;
+    align-items: center;
+}
+.wrapper span {
     font-size: 31px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     color: black;
+    opacity: 0.6;
     line-height: 1.35em;
-    
-    }
-    
-    span {
-        bottom: 0;
-        left: 0;
-        width: 170px;
-    }
 }
-.filter li {
-    display: flex;
-    justify-content: space-between;
-    color: black;
-    border: 1px solid #e7e7ee;
-    overflow: hidden;
-    padding: 0;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    box-sizing: border-box;
-    a {
-        opacity: 1;
-    }
-}
+
 .headline {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Настройка цвета и прозрачности для блока с заголовком */
+    background: rgba(0, 0, 0, 0.1); /* Настройка цвета и прозрачности для блока с заголовком */
     transition: background 0.5s ease;
 }
 .onecard img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .onecard:hover .headline {
 display: block;
@@ -53,29 +34,29 @@ background: rgba(0, 0, 0, 0.75);
     position: absolute;
   width: 100%;
   left: 0;
-  top: 25%; /* Отступ сверху */
-  font-size: 1.900em; /* Размер текста заголовка */
+  top: 25%;
+  font-size: 1.900em; 
   text-align: center;
-  text-transform: uppercase; /* Заглавные буквы */
-  color: white; /* Цвет заголовка */
+  text-transform: uppercase; 
+  color: white;
   z-index: 1;
   transition: top .5s ease;
 }
 .cards {
 display: flex;
-justify-content: space-between;
-width: 100%;
+flex-wrap: wrap;
+justify-content: flex-start;
+width: 90%;
+margin: 0 auto;
 }
 .onecard {
-display: flex;
 background-repeat: no-repeat;
 border-image-width: 500px;
 box-sizing: border-box;
 position: relative;
-width: 100%;
+width: 30%;
 height: 350px;
 margin: 10px 15px;
-
 }
 .onecard:hover .title {
     top: 10%;
@@ -85,7 +66,7 @@ margin: 10px 15px;
     position: absolute;
     width: 100%;
     left:0;
-    top: 65%; /* Отступ сверху */
+    top: 75%; 
     text-align: center;
     opacity: 0;
     transition: opacity .35s ease;
@@ -106,3 +87,24 @@ margin: 10px 15px;
     opacity: 1;
     z-index: 1;
   }
+.categoryBlock {
+    display: flex;
+    border: 3px solid #999999bf;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 60%;
+}
+.categoryBlock a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    border: 2px solid #999999bf;
+    
+    padding: 0;
+    display: block;
+    padding: 17px 19px;
+    box-sizing: border-box;
+    z-index: 1;
+}
