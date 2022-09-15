@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: blue;
+    background-color: #355c7d;
         .logo{
             width: 100px;
             height: 80px;
@@ -32,6 +32,9 @@
                 list-style-type: none;
                 justify-content: space-between;
                 margin-right: 15%;
+                .link{
+                    text-decoration: none;
+                }
             }
         }
 }
@@ -40,22 +43,10 @@ li{
     text-transform: uppercase;
     font-weight: 500;
     color: #fff;
-    transition: 0.2s;
+    transition: 0.1s;
     cursor: pointer;
-    &::after{
-        content: '';
-        position: absolute;
-        top: 62px;
-        display: block;
-        width: 4%;
-        height: 1.5px;
-        background-color: #fff;
-        opacity: 0;
-        transition: ease-in opacity 0.5s;
-        transition-delay: .2s;
-    }
-    &:hover::after{
-        opacity: 1;
-        transition-delay: .1s;
+    &:hover{
+        margin-bottom: 5px;
+        border-bottom: 2px solid #01c38d;
     }
 }
