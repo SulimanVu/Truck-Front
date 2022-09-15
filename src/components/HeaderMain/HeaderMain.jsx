@@ -32,7 +32,7 @@ const HeaderMain = () => {
           <Link to="/about" className={styles.link}>
             <li>about us</li>
           </Link>
-          <Link to="/signin" className={styles.link}>
+          <Link to="/login" className={styles.link}>
             <li className={styles.link_mg}>sign in</li>
           </Link>
           <Link to="/signup" className={styles.link}>

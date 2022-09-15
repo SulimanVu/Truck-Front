@@ -69,12 +69,12 @@ const SignUp = () => {
                 <div className={styles.block_two}>
                     <h1 className={styles.title}>Sign Up</h1>
                     <form onSubmit={handleSignUp} className={styles.form_signUp}>
-                        <input type="text" value={name} placeholder='Имя...' onChange={(e) => handleName(e)} className={styles.input}/>
-                        <input type="tel" value={phone} placeholder='Телефон...' onChange={(e) => handlePhone(e)} className={styles.input2}/>
-                        <input type="email" value={mail} placeholder='Mail....' onChange={(e) => handleMail(e)} className={styles.input3}/>
-                        <input type="text" value={login} placeholder='Логин...' onChange={(e) => handleLogin(e)} className={styles.input4}/>
-                        <input type={text ? 'password' : 'text'} value={password} placeholder='Пароль...' onChange={(e) => handlePassword(e)} className={styles.input5}/>
-                        <img src={iconPassword ? "https://cdn-icons-png.flaticon.com/512/159/159604.png" : "https://cdn-icons-png.flaticon.com/512/7615/7615155.png"} alt="" className={styles.eyeForPassword} onClick={handleClick}/>
+                        <input type="text" value={name} placeholder='Имя' onChange={(e) => handleName(e)} className={styles.input}/>
+                        <input type="tel" value={phone} placeholder='Телефон' onChange={(e) => handlePhone(e)} className={styles.input2}/>
+                        <input type="email" value={mail} placeholder='Mail' onChange={(e) => handleMail(e)} className={styles.input3}/>
+                        <input type="text" value={login} placeholder='Логин' onChange={(e) => handleLogin(e)} className={styles.input4}/>
+                        <input type={text ? 'password' : 'text'} value={password} placeholder='Пароль' onChange={(e) => handlePassword(e)} className={styles.input5}/>
+                        <img src={iconPassword ? "https://cdn-icons-png.flaticon.com/512/159/159604.png" : "https://cdn-icons-png.flaticon.com/512/7615/7615155.png"} alt="#" className={styles.eyeForPassword} onClick={handleClick}/>
 
                         <button type='submit' className={styles.btn}>Регистрация</button>
                     </form>

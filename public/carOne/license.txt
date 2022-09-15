@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chevrolet Jumbo Truck
+* source:	https://sketchfab.com/3d-models/chevrolet-jumbo-truck-27a0aaa34e7d4ea7877393178d82b01c
+* author:	Medhatelo (https://sketchfab.com/Medhatelo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chevrolet Jumbo Truck" (https://sketchfab.com/3d-models/chevrolet-jumbo-truck-27a0aaa34e7d4ea7877393178d82b01c) by Medhatelo (https://sketchfab.com/Medhatelo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
