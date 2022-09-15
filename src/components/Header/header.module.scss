@@ -35,6 +35,14 @@
                 .link{
                     text-decoration: none;
                 }
+                .link_off{
+                    color: silver;
+                    cursor:default;
+                    &:hover{
+                        margin-bottom: 0;
+                        border-bottom: 0;
+                    }
+                }
             }
         }
 }

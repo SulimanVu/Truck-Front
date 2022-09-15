@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   token: localStorage.getItem("token"),
+  userId: localStorage.getItem("id")
 };
 
 export const signin = createAsyncThunk(
@@ -15,13 +16,15 @@ export const signin = createAsyncThunk(
         },
         body: JSON.stringify({ login, password }),
       });
-      const token = res.json();
-      if (token.error) {
-        return thunkAPI.rejectWithValue(token.error);
+      const data = res.json();
+      if (data.error) {
+        return thunkAPI.rejectWithValue(data.error);
       }
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("id", data.id);
 
-      return token;
+
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -58,6 +61,7 @@ const applicationSlice = createSlice({
     builder
     .addCase(signin.fulfilled, (state, action) => {
       state.token = action.payload;
+      state.userId= action.payload.id
     })
     .addCase(authSignUp.fulfilled, (state, action) => {
       state.token = action.payload
