@@ -1,11 +1,12 @@
 .wrapper {
     background-image: url('../../public/two_bg.jpg');
+    min-height: 100vh;
     width: 100%;
     align-items: center;
 }
 .wrapper span {
     font-size: 31px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: black;
     opacity: 0.6;
@@ -43,11 +44,15 @@ background: rgba(0, 0, 0, 0.75);
   transition: top .5s ease;
 }
 .cards {
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-start;
-width: 90%;
-margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 20px auto;
+    .not_auto{
+        color: #355c7d;
+        margin: 15% auto 0;
+    }
 }
 .onecard {
 background-repeat: no-repeat;
@@ -57,6 +62,7 @@ position: relative;
 width: 30%;
 height: 350px;
 margin: 10px 15px;
+box-shadow: 5px 5px 5px silver;
 }
 .onecard:hover .title {
     top: 10%;
@@ -76,7 +82,7 @@ margin: 10px 15px;
     background-color: #1874c1;
     color: #ffffff;
     background: linear-gradient(to top, #1874c1, #0b7b8f);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     color: #ffffff !important;
     padding: 14px 25px;
@@ -89,22 +95,25 @@ margin: 10px 15px;
   }
 .categoryBlock {
     display: flex;
-    border: 3px solid #999999bf;
-    overflow: hidden;
+    clip-path: polygon(75% 0%,80.49% 54.55%,75% 100%,0% 100%,0.00% 55.64%,0% 0%);
+    background-color: #fff;
     box-sizing: border-box;
     width: 60%;
 }
 .categoryBlock a {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
-    color: black;
-    border: 2px solid #999999bf;
-    
-    padding: 0;
     display: block;
     padding: 17px 19px;
     box-sizing: border-box;
-    z-index: 1;
+}
+.links{
+    color: #355c7d;
+    transition: .5s;
+    &:hover{
+        color: #01c38d;
+        scale: 1.03;
+    }
 }

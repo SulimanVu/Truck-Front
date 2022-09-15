@@ -10,6 +10,7 @@ import OneCar from './pages/OneCar/OneCar'
 
 
 
+
 function App() {
   return (
     <>
@@ -20,14 +21,13 @@ function App() {
         <Route path="/user/:id" element={<User />} />
         <Route path="/login" element={<FormRegistration />} />
         <Route path="/about" element={<About />} />
-
-        <Route path='/cars' element={<CarsPage/>} />
-        <Route path='/car/:id' element={<OneCar />} />
+        <Route path="/cars" element={<CarsPage />} />
+        <Route path="/car/:id" element={<OneCar />} />
+        <Route path="/cars/category/:id" element={<CarsPage />} />
 
       </Routes>
       <Footer />
     </>
-
   );
 }
 
