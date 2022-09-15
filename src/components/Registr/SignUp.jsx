@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authSignUp } from '../../features/applicationSlice';
 import styles from './signup.module.scss'
-import 'fa-icons';
+
 
 
 
