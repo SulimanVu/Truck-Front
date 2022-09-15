@@ -10,6 +10,5 @@ export const store = configureStore({
     request,
     car,
     category,
-
   },
 });

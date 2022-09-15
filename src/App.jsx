@@ -5,12 +5,17 @@ import Footer from "./components/Footer/Footer";
 import User from "./pages/UserPage/User";
 import FormRegistration from "./pages/FormRegistration/FormRegistration";
 import About from "./pages/About/About";
-import CarsPage from "./pages/CarsPage/CarsPage";
-import OneCar from "./pages/OneCar/OneCar";
+import CarsPage from "./pages/CarsPage/CarsPage"
+import OneCar from './pages/OneCar/OneCar'
+
+
+
 
 function App() {
   return (
     <>
+
+
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/user/:id" element={<User />} />
@@ -19,6 +24,7 @@ function App() {
         <Route path="/cars" element={<CarsPage />} />
         <Route path="/car/:id" element={<OneCar />} />
         <Route path="/cars/category/:id" element={<CarsPage />} />
+
       </Routes>
       <Footer />
     </>

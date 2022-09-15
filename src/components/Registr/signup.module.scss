@@ -1,0 +1,143 @@
+.container {
+    background-color: #1f2029;
+    height: 80vh;
+    
+}
+
+.block_signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.block_two {
+   height: 400px;
+    width: 480px;
+    background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  margin-bottom: 100px;
+  border-radius: 5px;
+}
+
+
+.form_signUp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-left: 90px;
+    margin-top: 10px;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input {
+    height: 40px;
+    width: 400px;
+    margin-bottom: 5px;
+    font-weight: 100;
+    border-radius: 5px;
+    background-color: #1f2029;
+    border-right: none;
+    border-bottom: none;
+    color: bisque;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/2698/2698198.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding-left:60px;;
+}
+
+.input2 {
+    height: 40px;
+    width: 400px;
+    margin-bottom: 5px;
+    font-weight: 100;
+    border-radius: 5px;
+    background-color: #1f2029;
+    border-right: none;
+    border-bottom: none;
+    color: bisque;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/8051/8051300.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding-left:60px;;
+}
+
+.input3 {
+    height: 40px;
+    width: 400px;
+    margin-bottom: 5px;
+    font-weight: 100;
+    border-radius: 5px;
+    background-color: #1f2029;
+    border-right: none;
+    border-bottom: none;
+    color: bisque;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/7422/7422027.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding-left:60px;;
+}
+
+.input4 {
+    height: 40px;
+    width: 400px;
+    margin-bottom: 5px;
+    font-weight: 100;
+    border-radius: 5px;
+    background-color: #1f2029;
+    border-right: none;
+    border-bottom: none;
+    color: bisque;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/7211/7211037.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding-left:60px;;
+}
+
+.input5 {
+    height: 40px;
+    width: 400px;
+    margin-bottom: 5px;
+    font-weight: 100;
+    border-radius: 5px;
+    background-color: #1f2029;
+    border-right: none;
+    border-bottom: none;
+    color: bisque;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/7558/7558336.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding-left:60px;;
+}
+
+
+.eyeForPassword {
+    position: absolute;
+    top: 210px;
+    right: -60px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #999;
+}
+
+.btn {
+    margin-top: 20px;
+   padding: 10px 40px; 
+   font-weight: bold;
+    font-size: 20px;
+    border-radius: 100px;
+    border: none;
+}
