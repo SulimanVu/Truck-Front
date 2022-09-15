@@ -21,8 +21,8 @@ const carSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.
-            addCase(fetchCar.fulfilled, (state, action) => {
+        builder
+            .addCase(fetchCar.fulfilled, (state, action) => {
                 state.car = action.payload;
             })
     }

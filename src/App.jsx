@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import User from "./pages/UserPage/User";
 import FormRegistration from "./pages/FormRegistration/FormRegistration";
 import About from "./pages/About/About";
-import CarsPage from './pages/CarsPage/CarsPage'
+
 
 import OneCar from './pages/OneCar/OneCar'
 
