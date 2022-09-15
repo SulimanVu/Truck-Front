@@ -20,7 +20,6 @@ function App() {
         <Route path="/user/:id" element={<User />} />
         <Route path="/login" element={<FormRegistration />} />
         <Route path="/about" element={<About />} />
-
         <Route path='/cars' element={<CarsPage/>} />
         <Route path='/car/:id' element={<OneCar />} />
       </Routes>
