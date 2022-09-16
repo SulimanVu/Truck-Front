@@ -3,7 +3,6 @@ footer {
   background: rgba(181, 181, 184, 0.344);
   border-top: 1px solid #999;
 
-
   .general {
     // margin-left: 35%;
     display: flex;
@@ -37,8 +36,8 @@ footer {
     margin-left: 60%;
     display: flex;
     font-size: 13px;
-    
-    img{
+
+    img {
       width: 30px;
       height: 30px;
     }
@@ -53,10 +52,10 @@ footer {
     display: flex;
     font-size: 13px;
     img {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    margin-top: 4px;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      margin-top: 4px;
     }
   }
 
@@ -70,6 +69,5 @@ footer {
   .dno > p {
     font-size: 13px;
     font-weight: 300;
-    
   }
 }
