@@ -3,19 +3,20 @@ import styles from "./header.module.scss";
 import logo from "../../public/logo.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 const Header = () => {
-  const id = useSelector(state => state.application.userId)
+  const id = useSelector((state) => state.application.userId);
   const token = useSelector((state) => state.application.token);
 
   return (
     <header className={styles.header}>
       <motion.div
-      transition={{duration: 2}}
-      initial={{x:-100, rotate: -45, y:-5}}
-      animate={{x:0, rotate:[-45,-45,-45,-45,0], y:0}}
-       className={styles.logo}>
+        transition={{ duration: 2 }}
+        initial={{ x: -100, rotate: -45, y: -5 }}
+        animate={{ x: 0, rotate: [-45, -45, -45, -45, 0], y: 0 }}
+        className={styles.logo}
+      >
         <Link to="/">
           <img alt="#" src={logo} />
         </Link>
