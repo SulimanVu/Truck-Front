@@ -40,6 +40,7 @@ const CarsPage = () => {
           <span>НАШ АВТОПАРК</span>
         </h1>
         <div className={styles.categoryBlock}>
+          <Link to='/cars' className={styles.links}>Все</Link>
           {categories.map((item) => {
             return (
               <div className={styles.link_blog}>
@@ -86,6 +87,7 @@ const CarsPage = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 
