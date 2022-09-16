@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import application from '../features/applicationSlice'
-import car from '../features/carSlice'
-import request from '../features/requestSlice'
-import category from '../features/categorySlice'
+import application from "../features/applicationSlice";
+import car from "../features/carSlice";
+import request from "../features/requestSlice";
+import category from "../features/categorySlice";
+import user from "../features/userSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     request,
     car,
     category,
+    user,
   },
 });
