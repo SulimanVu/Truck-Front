@@ -1,5 +1,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 body::-webkit-scrollbar {
     width: 6px;               /* ширина всей полосы прокрутки */
@@ -46,12 +47,13 @@ body::-webkit-scrollbar-thumb {
             justify-content: space-between;
             align-self: flex-start;
             button{
+                border: transparent;
                 cursor: pointer;
                 padding: 10px 15px;
-                box-sizing: border-box;
                 transition: .2s;
                 &:hover{
                     border: none;
+
                     background-color: #355c7d;
                     color: #fff;
                 }

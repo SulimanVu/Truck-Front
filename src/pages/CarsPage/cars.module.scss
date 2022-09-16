@@ -98,7 +98,7 @@ box-shadow: 5px 5px 5px silver;
     clip-path: polygon(75% 0%,80.49% 54.55%,75% 100%,0% 100%,0.00% 55.64%,0% 0%);
     background-color: #fff;
     box-sizing: border-box;
-    width: 60%;
+    width: 70%;
 }
 .categoryBlock a {
     font-family: 'Montserrat', sans-serif;
@@ -115,5 +115,8 @@ box-shadow: 5px 5px 5px silver;
     &:hover{
         color: #01c38d;
         scale: 1.03;
+    }
+    &:focus{
+        color: #01c38d
     }
 }
