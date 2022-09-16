@@ -76,7 +76,7 @@ const SignUp = () => {
                         <input type={text ? 'password' : 'text'} value={password} placeholder='Пароль' onChange={(e) => handlePassword(e)} className={styles.input5}/>
                         <img src={iconPassword ? "https://cdn-icons-png.flaticon.com/512/159/159604.png" : "https://cdn-icons-png.flaticon.com/512/7615/7615155.png"} alt="#" className={styles.eyeForPassword} onClick={handleClick}/>
 
-                        <button type='submit' className={styles.btn}>Регистрация</button>
+                        <button type='submit' className={styles.btn}>РЕГИСТРАЦИЯ</button>
                     </form>
                 </div>
             </div>
