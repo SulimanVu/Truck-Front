@@ -1,0 +1,25 @@
+.main {
+  width: 60%;
+  height: 300px;
+  margin: 30px auto;
+  font-size: 28px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  color: #355c7d;
+  font-weight: 500;
+  .img {
+    width: 140px;
+    margin-right: 30px;
+    background-image: url("https://html5css.ru/howto/img_avatar.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  div {
+    span {
+      font-weight: 200;
+      color: #355c7d;
+    }
+  }
+}

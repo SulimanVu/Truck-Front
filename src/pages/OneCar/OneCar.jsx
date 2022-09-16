@@ -28,7 +28,7 @@ const OneCar = () => {
     return (
         <>
             <Header />
-        <div>
+        <div className={styles.main}>
 
            {car.map(el => {
             return (
@@ -46,7 +46,7 @@ const OneCar = () => {
                     animate={{opacity:1, x:0}}
                     
                  className={styles.description_container}>
-                    <h3 className={styles.name}>{el.name}</h3>
+                    <h3 className={styles.name}>Водитель: &nbsp;&nbsp;{el.name}</h3>
 
                    <div className={styles.loadCapcity_block}>
                    <img src="https://cdn-icons-png.flaticon.com/128/38/38075.png" alt=""  className={styles.loadCapcity}/>

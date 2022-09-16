@@ -1,9 +1,11 @@
 section{
     width: 100%;
+    min-height: 90vh;
     display: flex;
     .aside{
         margin-top: 10px;
         width: 15%;
+        color: #fff;
         div{
             margin-bottom: 2px;
             font-weight: 500;
@@ -22,6 +24,11 @@ section{
                 color: #01c38d;
                 box-shadow: -2px 3px 3px rgb(14, 132, 161);
             }
+        }
+        .Link{
+            font-weight: 300;
+            text-decoration: none;
+            color: #fff;        
         }
     }
     .request{

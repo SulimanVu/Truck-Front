@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   token: localStorage.getItem("token"),
-  userId: localStorage.getItem("id")
+  userId: localStorage.getItem("id"),
 };
 
 export const authSignIn = createAsyncThunk(
-  "signin",
+  "auth/signn",
   async ({ login, password }, thunkAPI) => {
     try {
       const res = await fetch("http://localhost:3030/user/login", {
@@ -23,7 +23,6 @@ export const authSignIn = createAsyncThunk(
       localStorage.setItem("token", data.token);
       localStorage.setItem("id", data.id);
 
-
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -31,27 +30,29 @@ export const authSignIn = createAsyncThunk(
   }
 );
 
-export const authSignUp = createAsyncThunk("auth/signUp", async ({name, phone, mail, login, password}, thunkAPI) => {
-  try {
-    const res = await fetch("http://localhost:3030/user/registr", {
-      method: "POST",
-      headers: {
-        "Content-Type": 'application/json'
-      },
-      body: JSON.stringify({name, phone, mail, login, password})
-    })
-    const json = await res.json();
+export const authSignUp = createAsyncThunk(
+  "auth/signUp",
+  async ({ name, phone, mail, login, password }, thunkAPI) => {
+    try {
+      const res = await fetch("http://localhost:3030/user/registr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, phone, mail, login, password }),
+      });
+      const json = await res.json();
 
-
-    if (json.error) {
+      if (json.error) {
         return thunkAPI.rejectWithValue(json.error);
-    }
+      }
 
-        return json;
-  } catch(e) {
-    thunkAPI.rejectWithValue(e)
+      return json;
+    } catch (e) {
+      thunkAPI.rejectWithValue(e);
+    }
   }
-})
+);
 
 const applicationSlice = createSlice({
   name: "application",
@@ -59,14 +60,14 @@ const applicationSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-    .addCase(authSignIn.fulfilled, (state, action) => {
-      console.log(action.payload.token);
-      state.token = action.payload.token;
-      state.userId= action.payload.id
-    })
-    .addCase(authSignUp.fulfilled, (state, action) => {
-      state.token = action.payload
-    })
+      .addCase(authSignIn.fulfilled, (state, action) => {
+        console.log(action.payload.token);
+        state.token = action.payload.token;
+        state.userId = action.payload.id;
+      })
+      .addCase(authSignUp.fulfilled, (state, action) => {
+        state.token = action.payload;
+      });
   },
 });
 
