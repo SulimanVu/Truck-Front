@@ -5,18 +5,18 @@ const initialState = {
   userId: localStorage.getItem("id")
 };
 
-export const signin = createAsyncThunk(
+export const authSignIn = createAsyncThunk(
   "signin",
   async ({ login, password }, thunkAPI) => {
     try {
-      const res = fetch("http://localhost:3030/login", {
+      const res = await fetch("http://localhost:3030/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ login, password }),
       });
-      const data = res.json();
+      const data = await res.json();
       if (data.error) {
         return thunkAPI.rejectWithValue(data.error);
       }
@@ -33,7 +33,7 @@ export const signin = createAsyncThunk(
 
 export const authSignUp = createAsyncThunk("auth/signUp", async ({name, phone, mail, login, password}, thunkAPI) => {
   try {
-    const res = fetch("http://localhost:3030/user/registr", {
+    const res = await fetch("http://localhost:3030/user/registr", {
       method: "POST",
       headers: {
         "Content-Type": 'application/json'
@@ -59,8 +59,9 @@ const applicationSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-    .addCase(signin.fulfilled, (state, action) => {
-      state.token = action.payload;
+    .addCase(authSignIn.fulfilled, (state, action) => {
+      console.log(action.payload.token);
+      state.token = action.payload.token;
       state.userId= action.payload.id
     })
     .addCase(authSignUp.fulfilled, (state, action) => {

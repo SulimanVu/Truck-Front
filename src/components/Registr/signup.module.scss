@@ -45,12 +45,14 @@
     border-right: none;
     border-bottom: none;
     color: bisque;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/2698/2698198.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1057/1057231.png);
+
+    padding-left: 20px;
     background-repeat: no-repeat;
     background-size: 28px;
     background-position: 0 center;
     padding-left:40px;
-}
+    }
 
 .input2 {
     height: 40px;
@@ -62,7 +64,7 @@
     border-right: none;
     border-bottom: none;
     color: bisque;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/8051/8051300.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/724/724664.png);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: 0 center;
@@ -79,7 +81,7 @@
     border-right: none;
     border-bottom: none;
     color: bisque;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/7422/7422027.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/726/726573.png);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: 0 center;
@@ -96,7 +98,7 @@
     border-right: none;
     border-bottom: none;
     color: bisque;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/7211/7211037.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/5800/5800171.png);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: 0 center;
@@ -113,11 +115,12 @@
     border-right: none;
     border-bottom: none;
     color: bisque;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/7558/7558336.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/3177/3177401.png);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: 0 center;
     padding-left:40px;
+    z-index: 0;
 }
 
 
@@ -145,6 +148,7 @@
     padding: 10px 40px; 
     font-weight: bold;
     font-size: 20px;
+    height: 40px;
     border-radius: 100px;
     border: none;
     transition: .3s;
@@ -152,4 +156,15 @@
         background-color: #359999;
         color: #fff;
     }
+}
+
+.eyeForPasswor {
+    position: absolute;
+    top: 60px;
+    right: -40px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    filter: invert(100%);
+    z-index: 1;
 }
