@@ -21,7 +21,7 @@ table {
   font-family: "Roboto", sans-serif;
   font-family: "Rubik", sans-serif;
   margin: auto;
-  width: 50%;
+  width: 60%;
   box-shadow: #55acee;
   margin-top: 20px;
 }
@@ -138,8 +138,8 @@ label {
   justify-content: space-between;
 }
 .form-stepper__body {
-  min-height: 200px;
-  width: 700px;
+  min-height: 300px;
+  width: 900px;
 }
 .form-stepper__action {
   display: flex;
