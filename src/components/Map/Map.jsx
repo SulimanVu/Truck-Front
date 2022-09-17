@@ -1,14 +1,13 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import L from "leaflet";
 import RoutineMachine from "./RoutineMachine";
-import { saveRoute } from "../../features/requestSlice";
+
 
 function Map() {
 
-  const [error, setError] = useState(false)
-
+  // TODO МОЖНО ДОБАВИТЬ handleAlert чтобы оповещать что данные сохранены useState
   useEffect(() => {
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({
@@ -37,7 +36,6 @@ function Map() {
         />
         <RoutineMachine position={"topright"} />
       </MapContainer>
-    {error && <h1 style={{color: 'red'}}>Ваши координаты сохранены</h1>}
     </>
   );
 }
