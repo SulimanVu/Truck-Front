@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./reques.css";
 
-const Headerform = ({step, handleStep}) => {
-
-
+const Headerform = ({ step, handleStep }) => {
   return (
     <div className="requestbody">
       <div className="step-header">

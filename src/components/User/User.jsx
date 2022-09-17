@@ -17,11 +17,11 @@ const User = () => {
   }, [dispatch]);
   return (
     <div className={styles.main}>
-      {user.map((item) => {
+      {user.map((item, index) => {
         return (
           <>
-            <div className={styles.img}></div>
-            <div>
+            <div className={styles.img} key={index}></div>
+            <div className={styles.text} key={index+100}>
               <div>
                 <span>Имя пользователя:</span>&nbsp;&nbsp;{item.name}
               </div>
