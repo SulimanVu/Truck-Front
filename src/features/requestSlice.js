@@ -17,6 +17,26 @@ export const fetchRequest = createAsyncThunk(
     }
 );
 
+export const addRequest = createAsyncThunk(
+    "add/request",
+    async ({car, user, kg, price}, thunkAPI) => {
+        try {
+            const res = await fetch("http://localhost:3030/request", {
+                method: "POST",
+                headers: {
+                    "Content-Type":"application/json",
+                },
+                body: JSON.stringify({car, user, kg, price})
+            });
+            const data = await res.json();
+            return data;
+        } catch (error) {
+            return thunkAPI.rejectWithValue(error)
+        }
+    }
+)
+
+
 const requestSlice = createSlice({
     name:'request',
     initialState,
@@ -25,6 +45,9 @@ const requestSlice = createSlice({
         builder
             .addCase(fetchRequest.fulfilled, (state, action)=>{
                 state.request = action.payload
+            })
+            .addCase(addRequest.fulfilled, (state, action) => {
+                state.request = state.request.push(action.payload);
             })
     }
 })
