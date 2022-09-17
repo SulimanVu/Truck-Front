@@ -139,7 +139,7 @@ p, label{
 }
 .form-stepper__body{
   min-height: 200px;
-  width: 540px;
+  width: 700px;
 }
 .form-stepper__action{
   display: flex;
@@ -184,3 +184,7 @@ p, label{
 .completed{
 background-color: blue;
 }
+
+
+
+

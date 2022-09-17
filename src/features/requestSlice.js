@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   request: [],
+  mapRoute: [],
 };
 
 export const fetchRequest = createAsyncThunk(
@@ -19,14 +20,15 @@ export const fetchRequest = createAsyncThunk(
 
 export const addRequest = createAsyncThunk(
     "add/request",
-    async ({car, user, kg, price}, thunkAPI) => {
+    async ({car, user, from, to, latLngFrom, latLngTo, km, kg, price}, thunkAPI) => {
         try {
             const res = await fetch("http://localhost:3030/request", {
                 method: "POST",
                 headers: {
-                    "Content-Type":"application/json",
+                    Authorization: `Bearer ${thunkAPI.getState().application.token}`,
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify({car, user, kg, price})
+                body: JSON.stringify({car, user, from, to, latLngFrom, latLngTo, km, kg, price})
             });
             const data = await res.json();
             return data;
@@ -40,16 +42,22 @@ export const addRequest = createAsyncThunk(
 const requestSlice = createSlice({
     name:'request',
     initialState,
-    reducers:{},
+    reducers: {
+        saveRoute: (state, action) => {
+            state.mapRoute = action.payload
+        }
+    },
     extraReducers: (builder) =>{
         builder
             .addCase(fetchRequest.fulfilled, (state, action)=>{
-                state.request = action.payload
+                state.request = JSON.stringify(action.payload)
             })
             .addCase(addRequest.fulfilled, (state, action) => {
-                state.request = state.request.push(action.payload);
+                state.request = (action.payload);
             })
     }
 })
+
+export const { saveRoute } = requestSlice.actions
 
 export default requestSlice.reducer
