@@ -10,7 +10,7 @@ const UserPage = () => {
   return (
     <>
       <Header />
-      <section>
+      <section className={styles.user_block}>
         <div className={styles.request}>
           {path === 'user' && <User />}
           {path === 'request' && <Request />}
