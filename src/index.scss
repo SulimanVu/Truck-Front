@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.leaflet-marker-icon {
+  width: 30px!important;
+  height: 30px!important;
+  margin-left: -8px!important;
+  margin-top: -20px!important;
+}

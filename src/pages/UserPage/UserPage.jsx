@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import User from "../../components/User/User"
 import styles from "./userpage.module.scss";
 import { Link, Navigate } from "react-router-dom";
+import RequestForm from "../requestForm/RequestForm";
 
 const UserPage = () => {
   const [path, setPath] = useState('user')
@@ -14,7 +15,7 @@ const UserPage = () => {
         <div className={styles.request}>
           {path === 'user' && <User />}
           {path === 'request' && <Request />}
-          {/* {path === 'addRequest' && <AddRequest />} */}
+          {path === 'addRequest' && <RequestForm/>}
           {path === 'card' && <Navigate to={'/cars'} />}
         </div>
         <div className={styles.aside}>
