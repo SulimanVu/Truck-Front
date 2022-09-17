@@ -13,19 +13,19 @@ function Map() {
     L.Icon.Default.mergeOptions({
       iconRetinaUrl: require("../../public/530453.png"),
       iconUrl: require("../../public/530453.png"),
-      shadowUrl: require("../../public/530453.png"),
+      shadowUrl: require("../../public/marker-shadow.png"),
     });
   }, []);
   
 
   
-  const center = [53.041274583621956, 38.59640482775108];
+  const center = [53.5, 38.5];
 
   return (
     <>
       <MapContainer
         center={center}
-        zoom={5}
+        zoom={4.1}
         scrollWheelZoom={false}
         style={{ height: "50vh", width: "90%", padding: 0, margin: ' 0 auto'}}
       >
