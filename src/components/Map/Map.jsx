@@ -11,11 +11,12 @@ function Map() {
   useEffect(() => {
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({
-      iconRetinaUrl: require("leaflet/dist/images/marker-icon.png"),
-      iconUrl: require("leaflet/dist/images/marker-icon.png"),
-      shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+      iconRetinaUrl: require("../../public/530453.png"),
+      iconUrl: require("../../public/530453.png"),
+      shadowUrl: require("../../public/530453.png"),
     });
   }, []);
+  
 
   
   const center = [53.041274583621956, 38.59640482775108];

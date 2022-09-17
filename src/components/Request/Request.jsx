@@ -7,16 +7,19 @@ import { motion } from "framer-motion";
 
 const Request = () => {
   const { id } = useParams();
+
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRequest());
+  }, []);
+
   const request = useSelector((state) =>
     state.request.request.filter((item) => {
       return item.user === id;
     })
   );
-
-  useEffect(() => {
-    dispatch(fetchRequest());
-  }, []);
+  
 
   return (
     <div>
