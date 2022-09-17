@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addRequest, saveRoute } from "../../features/requestSlice";
+import { addRequest } from "../../features/requestSlice";
 import "./reques.css";
 import Headerform from "./headerform";
 import Map from "../../components/Map/Map";
@@ -38,9 +38,6 @@ const RequestForm = () => {
   const [price, setPrice] = useState("");
   const [step, setStep] = useState(0);
 
-  const handleStep = () => {
-    setStep(step);
-  };
 
   const handleCar = (e) => {
     setCar(e.target.value);
@@ -80,21 +77,8 @@ const RequestForm = () => {
     const latLngTo = waypoint2.latLng
     const to = waypoint2.name 
 
-    console.log(carId[0]._id)
-    console.log(theUser[0]._id)
-    console.log(kg, price);
-    
-    console.log(from, to)
-    console.log(latLngFrom )
-    console.log(latLngTo)
-    console.log(km)
-
-    // from, to,
-    // latLngFrom, latLngTo,
-
     dispatch(addRequest({car: carId[0]._id, user: theUser[0]._id, kg, price, latLngFrom, latLngTo,from, to, km,  }))
     
-    // dispatch(addRequest({ car, user: theUser[0]._id, kg, price }));
   };
 
 
