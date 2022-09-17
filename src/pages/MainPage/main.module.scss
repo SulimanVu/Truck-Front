@@ -1,61 +1,63 @@
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 body::-webkit-scrollbar {
-    width: 6px;               /* ширина всей полосы прокрутки */
-  }
+  width: 6px; /* ширина всей полосы прокрутки */
+}
 body::-webkit-scrollbar-track {
-    background: #fff;        /* цвет зоны отслеживания */
-  }
+  background: #fff; /* цвет зоны отслеживания */
+}
 body::-webkit-scrollbar-thumb {
-    background-color: white;    /* цвет бегунка */
-    border-radius: 20px;       /* округлось бегунка */
-    border: 5px solid rgba(2, 2, 84, 0.737);  /* отступ вокруг бегунка */
-  }
-.main_img{
-    height: 700px;
+  background-color: white; /* цвет бегунка */
+  border-radius: 20px; /* округлось бегунка */
+  border: 5px solid rgba(81, 106, 152, 0.99); /* отступ вокруг бегунка */
+}
+.main_img {
+  height: 700px;
+  display: flex;
+  background-image: url("../../public/main_img.png");
+  background-position: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container {
+    width: 40%;
     display: flex;
-    background-image: url('../../public/main_img.png');
-    background-position: 30%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    .container{
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        margin-left: 10%;
-        .text_block{
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            h1{
-                font-size: 40px;
-            }
-            h2{
-                margin-top: 20px;
-                font-weight: 300;
-                font-size: 16px;
-            }
-        }
-        .btn_block{
-            margin-top: 20px;
-            display: flex;
-            width: 60%;
-            justify-content: space-between;
-            align-self: flex-start;
-            button{
-                cursor: pointer;
-                padding: 10px 15px;
-                box-sizing: border-box;
-                transition: .2s;
-                &:hover{
-                    border: none;
-                    background-color: #355c7d;
-                    color: #fff;
-                }
-            }
-        }
+    flex-direction: column;
+    align-self: center;
+    margin-left: 10%;
+    .text_block {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 16px;
+      }
     }
+    .btn_block {
+      margin-top: 20px;
+      display: flex;
+      width: 60%;
+      justify-content: space-between;
+      align-self: flex-start;
+      button {
+        border: transparent;
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: 0.2s;
+        &:hover {
+          border: none;
+
+          background-color: #355c7d;
+          color: #fff;
+        }
+      }
+    }
+  }
 }

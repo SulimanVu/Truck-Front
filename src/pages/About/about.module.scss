@@ -1,0 +1,26 @@
+.general {
+  background-image: url("../../public/about.jpg");
+  height: 700px;
+  width: 100%;
+  display: flex;
+  background-position: 1%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .left_block {
+    color: #fff;
+    width: 50%;
+  }
+  .right_block {
+    color: #fff;
+    width: 50%;
+    padding: 10% 5% 0 20%;
+    box-sizing: border-box;
+    div {
+      background-color: #335c7d66;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-top: 5%;
+    }
+  }
+}

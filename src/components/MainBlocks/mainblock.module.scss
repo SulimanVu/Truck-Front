@@ -1,5 +1,8 @@
 .bg_img{
     background: url('../../public/two_bg.jpg');
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .cards{
     width: 75%;
