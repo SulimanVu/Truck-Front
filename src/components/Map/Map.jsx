@@ -11,8 +11,8 @@ function Map() {
   useEffect(() => {
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({
-      iconRetinaUrl: require("leaflet/dist/images/530453.png"),
-      iconUrl: require("leaflet/dist/images/530453.png"),
+      iconRetinaUrl: require("leaflet/dist/images/marker-icon.png"),
+      iconUrl: require("leaflet/dist/images/marker-icon.png"),
       shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
     });
   }, []);
@@ -26,7 +26,7 @@ function Map() {
         center={center}
         zoom={5}
         scrollWheelZoom={false}
-        style={{ height: "70vh", width: "100%", padding: 0 }}
+        style={{ height: "50vh", width: "90%", padding: 0, margin: ' 0 auto'}}
       >
         <TileLayer
           url="https://{s}.tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token={accessToken}"

@@ -23,7 +23,6 @@ const Request = () => {
       {request.map((item, index) => {
         return (
           <div className={styles.request} key={index}>
-            {/* <div className={styles.map}>Здесь должна быть карта</div> */}
             <motion.div
               transition={{ duration: 1 }}
               initial={{ opacity: 0, y: 100 }}
@@ -31,13 +30,14 @@ const Request = () => {
               className={styles.info}
             >
               <div className={styles.text}>
-                <div>Заявка № &ensp;{index + 1}</div>
-                <div>Водитель :&ensp; {item.car.name}</div>
-                <div>Номер для связи :&ensp; {item.car.phone}</div>
-                <div>Ваша машина :&ensp; {item.car.model}</div>
-                <div>Отправка от :&ensp; {item.from}</div>
-                <div>Прибытие товара в :&ensp; {item.to}</div>
-                <div>Общее растояние :&ensp; {item.km} км</div>
+                <div>Заявка №&ensp;{index + 1}</div>
+                <div><span>Водитель :</span>&ensp; {item.car.name}</div>
+                <div><span>Номер для связи :</span>&ensp; {item.car.phone}</div>
+                <div><span>Ваша машина :</span>&ensp; {item.car.model}</div>
+                <div><span>Отправка от :</span>&ensp; {item.from}</div>
+                <div><span>Прибытие товара в :</span>&ensp; {item.to}</div>
+                <div><span>Общее растояние :</span>&ensp; {item.km} км</div>
+                <div><span>Вес груза :</span>&ensp; {item.kg} кг</div>
                 <div>
                   К оплате :&ensp; {item.price} <span>₽</span>
                 </div>

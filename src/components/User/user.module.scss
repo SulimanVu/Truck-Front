@@ -18,8 +18,13 @@
   }
   div {
     span {
-      font-weight: 200;
+      font-weight: 300;
       color: #355c7d;
+    }
+  }
+  .text{
+    div{
+      margin-top: 10px;
     }
   }
 }

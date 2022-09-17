@@ -1,51 +1,54 @@
-.request{
-    width: 90%;
-    height: 80vh;
+.request {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  margin: 40px auto;
+  .info {
     display: flex;
-    margin: auto;
-    margin-top: 40px;
-    .map{
-        width: 50%;
-        height: 400px;
-        background-color: red;
-        text-align: center;
-    }
-    .info{
-        display: flex;
-        width: 80%;
-        height: fit-content;
-        margin-left: 5%;
-        background-color: #355c7d;
-        color: #fff;
-        font-weight: 300;
-        padding: 10px 15px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        .text{
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            margin-left: 5%;
-            & div:nth-child(1){
-                font-weight: 600;
-                color: #01c38d;
-                font-size: 15px;
-            }
-            div{
-                margin-bottom: 10px;
-                font-size: 16px;
-            }
+    width: 85%;
+    margin: 0 auto;
+    background-color: #355c7d;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    .text {
+      cursor: default;
+      color: #fff;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 5%;
+      padding-right: 15px;
+      box-sizing: border-box;
+      & div:nth-child(1) {
+        font-weight: 600;
+        color: #01c38d;
+        font-size: 16px;
+        margin-left: -40px;
+      }
+      div {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 25px;
+        span {
+            font-weight: 400;
+          color: #01c38d;
         }
-        .img{
-            max-height: 80%;
-            max-width: 45%;
-            object-fit: cover;
-            display: flex;
-            img{
-                border-radius: 3px;
-                align-self: center;
-                width: 100%;
-            }
-        }
+      }
     }
+    .img {
+      height: 80%;
+      width: 65%;
+      object-fit: cover;
+      display: flex;
+      margin: auto;
+      img {
+        border-radius: 3px;
+        align-self: center;
+        width: 100%;
+      }
+    }
+  }
 }

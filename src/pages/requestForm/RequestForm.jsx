@@ -9,7 +9,6 @@ import { fetchUser } from "../../features/userSlice";
 import { fetchCar } from "../../features/carSlice";
 
 const RequestForm = () => {
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,9 +17,7 @@ const RequestForm = () => {
   }, [dispatch]);
 
   const cars = useSelector((state) => state.car.car);
-
-  const route = useSelector((state) => state.request.mapRoute)
-
+  const route = useSelector((state) => state.request.mapRoute);
   const { id } = useParams();
 
   const theUser = useSelector((state) =>
@@ -28,7 +25,6 @@ const RequestForm = () => {
       return id === item._id;
     })
   );
-
 
   const [car, setCar] = useState("");
   const [user, setUser] = useState("");
@@ -38,9 +34,8 @@ const RequestForm = () => {
   const [price, setPrice] = useState("");
   const [step, setStep] = useState(0);
 
-
-  const handleCar = (e) => {
-    setCar(e.target.value);
+  const handleCar = (id) => {
+    setCar(id);
   };
   const handleUser = (e) => {
     setUser(e.target.value);
@@ -64,23 +59,30 @@ const RequestForm = () => {
   };
 
   const handleAddRequest = () => {
+    const km = (route.summary.totalDistance / 1000).toFixed(1);
 
-    const carId = cars.filter(item => item.model === car)
-    
-    const km = (route.summary.totalDistance/1000).toFixed(1)
+    const waypoint1 = JSON.parse(route.waypoint1);
+    const waypoint2 = JSON.parse(route.waypoint2);
 
-    const waypoint1 = JSON.parse(route.waypoint1)
-    const waypoint2 = JSON.parse(route.waypoint2)
+    const latLngFrom = waypoint1.latLng;
+    const from = waypoint1.name;
+    const latLngTo = waypoint2.latLng;
+    const to = waypoint2.name;
 
-    const latLngFrom = waypoint1.latLng
-    const from = waypoint1.name
-    const latLngTo = waypoint2.latLng
-    const to = waypoint2.name 
-
-    dispatch(addRequest({car: carId[0]._id, user: theUser[0]._id, kg, price, latLngFrom, latLngTo,from, to, km,  }))
-    
+    dispatch(
+      addRequest({
+        car,
+        user: theUser[0]._id,
+        kg,
+        price,
+        latLngFrom,
+        latLngTo,
+        from,
+        to,
+        km,
+      })
+    );
   };
-
 
   return (
     <>
@@ -92,15 +94,21 @@ const RequestForm = () => {
               /** When the step is 0 , show main screen */
               step === 0 && (
                 <div className="first-step">
-                  <h2>Выберите приглядевшуюся вам машину</h2>
-                  <select name="carsSelect" onChange={e => handleCar(e)} value={car} >
-                    <option>Выберите приглядевшуюся вам машину</option>
-                    {cars.map(( item ) => {
-                      return <option>{item.model}</option>
+                  <div className="cars_div">
+                    <h2>Выберите приглядевшуюся вам машину</h2>
+                  </div>
+                  <div className="cars_map">
+                    {cars.map((item) => {
+                      return (
+                        <div
+                          className="car"
+                          onClick={() => handleCar(item._id)}
+                        >
+                          {item.model}
+                        </div>
+                      );
                     })}
-                  </select>
-
-                  
+                  </div>
                 </div>
               )
             }
@@ -152,12 +160,10 @@ const RequestForm = () => {
             {/* Background form i.e step 2 */}
             {step === 2 && (
               <div className="form-stepper__step2">
+                <div className="txt">Введите маршрут и массу груза</div>
                 <Map />
                 <div className="input-group">
-                  <label htmlFor="jobtitle">
-                    Введите маршрут и массу груза
-                    <h1>Масса груза</h1>
-                  </label>
+                  <h3>Масса груза :</h3>
 
                   <input
                     value={kg}
@@ -177,7 +183,7 @@ const RequestForm = () => {
             )}
           </div>
           <div className="form-stepper__action">
-            {step > 1 && (
+            {step > 0 && (
               <button
                 className="btn btn-secondary"
                 onClick={() => offStepChange()}
@@ -194,7 +200,10 @@ const RequestForm = () => {
                 Далее
               </button>
             ) : step === 3 ? (
-              <button className="btn btn-primary" onClick={handleAddRequest}>
+              <button
+                className="btn btn-primary sign"
+                onClick={handleAddRequest}
+              >
                 Отправить
               </button>
             ) : (
