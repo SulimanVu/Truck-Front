@@ -101,6 +101,7 @@ const RequestForm = () => {
                     {cars.map((item, index) => {
                       return (
                         <div
+                          tabindex={index}
                           key={index}
                           className="car"
                           onClick={() => handleCar(item._id)}

@@ -9,7 +9,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 /* Root variables */
 .requestbody {
   --primary: #6c3ec2;
@@ -175,15 +174,12 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-light);
+  background-color: #fff;
 }
 .step-header__step h2 {
-  color: white;
+  color: #01c38d;
+  font-weight: 600;
 }
-.completed {
-  background-color: blue;
-}
-
 select {
   height: 40px;
   border-radius: 5px;
@@ -231,6 +227,7 @@ select {
 }
 .cars_map div:focus {
   color: #01c38d;
+  background-color: #0c1437
 }
 .cars_map div:hover {
   color: #01c38d;
@@ -257,6 +254,7 @@ select {
   border-radius: 5px;
 }
 .completed {
+  color: #fff;
   background-color: #01c38d;
   box-shadow: 0 0 15px #01c38d;
 }

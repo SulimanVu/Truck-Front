@@ -87,7 +87,7 @@ const Request = () => {
                     </div>
                   </div>
                   <div className={styles.img}>
-                    {/* Возможно и здесь будет карта */}
+                    {/* Отрисовка Карты */}
                     <Staticmap request={item} />
                   </div>
                 </motion.div>
@@ -96,7 +96,7 @@ const Request = () => {
           })}
         </div>
       ) : (
-        <Card/>
+        <Card />
       )}
     </>
   );
