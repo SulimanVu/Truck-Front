@@ -29,6 +29,59 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <div className={styles.general2}>
+        <div className={styles.left_block}>
+          <div className={styles.info}>
+            <h1>Lorem</h1>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quisquam similique repudiandae. Repellat quam, officia temporibus
+            </h4>
+          </div>
+          <div className={styles.info}>
+            <h1>Lorem</h1>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quisquam similique repudiandae. Repellat quam, officia temporibus
+            </h4>
+          </div>
+          <div className={styles.info}>
+            <h1>Lorem</h1>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quisquam similique repudiandae. Repellat quam, officia temporibus
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.general3}>
+        <div className={styles.left_block}></div>
+        <div className={styles.right_block}>
+          <div className={styles.info}>
+            <h1>Lorem</h1>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quisquam similique repudiandae. Repellat quam, officia temporibus
+            </h4>
+          </div>
+          <div className={styles.info2}>
+            <h1>Lorem</h1>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quisquam similique repudiandae. Repellat quam, officia temporibus
+            </h4>
+          </div>
+          <div className={styles.info3}>
+            <h1>Lorem</h1>
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              quisquam similique repudiandae. Repellat quam, officia temporibus
+            </h4>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
