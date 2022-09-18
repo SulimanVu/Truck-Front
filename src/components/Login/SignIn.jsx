@@ -29,7 +29,7 @@ const SignIn = () => {
 
   const handleClick = () => {
     setText(!text);
-    setIconPassword(!iconPassword);
+    setIconPassword(!iconPassword);ç
   };
 
   return (
