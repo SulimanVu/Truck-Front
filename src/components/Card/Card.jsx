@@ -8,7 +8,7 @@ import {
   formatCreditCardNumber,
   formatCVC,
   formatExpirationDate,
-} from "../Request/utils";
+} from "./utils";
 
 const Card = () => {
   const [cvc, setCvc] = useState("");
