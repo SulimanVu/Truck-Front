@@ -203,7 +203,7 @@ const RequestForm = () => {
             ) : step === 3 ? (
               <button
                 className="btn btn-primary sign"
-                onClick={handleAddRequest}
+                onClick={()=>handleAddRequest()}
               >
                 Отправить
               </button>
