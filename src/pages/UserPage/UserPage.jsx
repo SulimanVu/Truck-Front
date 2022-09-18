@@ -23,9 +23,8 @@ const UserPage = () => {
           <div onClick={() => setPath("user")}>Личная страница</div>
           <div onClick={() => setPath("request")}>Заявки</div>
           <div onClick={() => setPath("addRequest")}>Сделать заявку</div>
-          <div onClick={() => setPath("cars")}>Заказанные машины</div>
           <Link to="/" className={styles.Link}>
-            <div>Выход</div>
+            <div>Выйти из аккаунта</div>
           </Link>
         </div>
       </section>

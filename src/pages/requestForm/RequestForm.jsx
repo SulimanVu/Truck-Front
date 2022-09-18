@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequest } from "../../features/requestSlice";
 import "./reques.css";
-import Headerform from "./headerform";
+import Headerform from "./HeaderForm";
 import Map from "../../components/Map/Map";
 import { useParams } from "react-router-dom";
 import { fetchUser } from "../../features/userSlice";
 import { fetchCar } from "../../features/carSlice";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RequestForm = () => {
   const dispatch = useDispatch();
@@ -82,10 +85,21 @@ const RequestForm = () => {
         km,
       })
     );
+
+    toast.success('Отправка данных', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
   };
 
   return (
     <>
+      <ToastContainer limit={1} />
       <div className="requestbody">
         <Headerform step={step} onStepChange={onStepChange} />
         <div className="form-stepper">
@@ -101,7 +115,7 @@ const RequestForm = () => {
                     {cars.map((item, index) => {
                       return (
                         <div
-                          tabindex={index}
+                          tabIndex={index}
                           key={index}
                           className="car"
                           onClick={() => handleCar(item._id)}
@@ -182,9 +196,9 @@ const RequestForm = () => {
             )}
           </div>
           <div className="form-stepper__action">
-            {step > 0 && (
+            {step >= 0 && (
               <button
-                className="btn btn-secondary"
+                className={`btn btn-secondary ${step === 0 && "close"}`}
                 onClick={() => offStepChange()}
               >
                 Назад
@@ -201,7 +215,7 @@ const RequestForm = () => {
             ) : step === 3 ? (
               <button
                 className="btn btn-primary sign"
-                onClick={()=>handleAddRequest()}
+                onClick={() => handleAddRequest()}
               >
                 Отправить
               </button>
