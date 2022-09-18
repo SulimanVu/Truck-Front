@@ -95,7 +95,7 @@ const RequestForm = () => {
               step === 0 && (
                 <div className="first-step">
                   <div className="cars_div">
-                    <h2>Выберите приглядевшуюся вам машину</h2>
+                    <h2>Выберите приглядевшуюся вам машину :</h2>
                   </div>
                   <div className="cars_map">
                     {cars.map((item, index) => {
@@ -123,7 +123,6 @@ const RequestForm = () => {
                 <div className="input-group">
                   <label htmlFor="fullname">Ваше имя</label>
                   <input
-                    disabled={true}
                     value={user}
                     type="text"
                     placeholder={theUser[0].name}
@@ -135,7 +134,6 @@ const RequestForm = () => {
                 <div className="input-group">
                   <label htmlFor="email">Email</label>
                   <input
-                    disabled={true}
                     value={email}
                     type="email"
                     required
@@ -147,7 +145,6 @@ const RequestForm = () => {
                 <div className="input-group">
                   <label htmlFor="password">Телефон</label>
                   <input
-                    disabled={true}
                     value={phone}
                     type="password"
                     required

@@ -207,16 +207,17 @@ select {
 .cars_div {
   margin-top: 20px;
   height: 30px;
-  padding: 5px 15px;
-  border-radius: 5px;
   font-size: 24px;
-  color: #55acee;
+  color: #5755ee;
   align-items: center;
   display: flex;
   cursor: default;
 }
+.cars_div h2{
+  color: #fff;
+}
 .cars_map {
-  margin-top: 10px;
+  margin: 20px auto 0;
 }
 .cars_map div {
   border-radius: 5px;
@@ -240,6 +241,9 @@ select {
 .form-stepper__step1 {
   width: 50%;
   margin: 50px auto;
+}
+.form-stepper__step1 h2{
+  color: #fff;
 }
 .input-group {
   margin-top: 10px;
@@ -295,9 +299,31 @@ select {
   padding: 5px 15px;
 }
 .form-stepper__step3 h2 {
+  color: #fff;
   width: max-content;
   margin: 20px auto;
 }
 .form-stepper__body{
   width: 100%;
+}
+.requestbody{
+  padding-top: 20px;
+  background: #355c7d;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.car{
+  width: 80%;
+  margin: auto;
+}
+.input-group label{
+  color: #fff;
+}
+.userpage_request{
+  margin-top: 40px !important;
+}
+.requestbody {
+  margin-top: 20px;
 }
