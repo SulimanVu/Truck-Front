@@ -15,6 +15,10 @@ const UserPage = () => {
     setAlert(false)
   }
 
+  const handleLogOut =() => {
+    localStorage.clear();
+  }
+
   return (
     <>
       <Header />
@@ -30,8 +34,8 @@ const UserPage = () => {
           <div onClick={() => handleRequest()}>Заявки</div>
           <div onClick={() => setPath("addRequest")}>Сделать заявку</div>
           <div className={alert ? styles.alert : styles.alertoff}><p>1</p></div>
-          <Link to="/" className={styles.Link}>
-            <div>Выйти из аккаунта</div>
+          <Link to="/"  className={styles.Link}>
+            <div onClick={() => handleLogOut()}>Выйти из аккаунта</div>
           </Link>
         </div>
       </section>
