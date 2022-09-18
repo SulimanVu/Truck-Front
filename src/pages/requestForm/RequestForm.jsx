@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequest } from "../../features/requestSlice";
 import "./reques.css";
-import Headerform from "./HeaderForm";
+import Headerform from "./headerform";
 import Map from "../../components/Map/Map";
 import { useParams } from "react-router-dom";
 import { fetchUser } from "../../features/userSlice";
@@ -11,7 +11,7 @@ import { fetchCar } from "../../features/carSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const RequestForm = () => {
+const RequestForm = ({setAlert}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -62,6 +62,20 @@ const RequestForm = () => {
   };
 
   const handleAddRequest = () => {
+
+    toast.success("Ваша заявка отправлена на рассмотрение...", {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+    setTimeout(() => {
+      setAlert(true)
+    }, 3000)
+    
     const km = (route.summary.totalDistance / 1000).toFixed(1);
 
     const waypoint1 = JSON.parse(route.waypoint1);
@@ -86,15 +100,7 @@ const RequestForm = () => {
       })
     );
 
-    toast.success('Отправка данных', {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      });
+   
   };
 
   return (
