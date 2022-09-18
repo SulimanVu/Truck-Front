@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchRequest } from "../../features/requestSlice";
 import { motion } from "framer-motion";
+import Staticmap from "./Staticmap";
 
 const Request = () => {
   const { id } = useParams();
@@ -47,7 +48,7 @@ const Request = () => {
               </div>
               <div className={styles.img}>
                 {/* Возможно и здесь будет карта */}
-                <img src={`http://localhost:3030/${item.car.img}`} alt="" />
+                <Staticmap request={item}/>
               </div>
             </motion.div>
           </div>
