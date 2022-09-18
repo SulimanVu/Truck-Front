@@ -131,6 +131,10 @@ label {
   width: fit-content;
   margin: 0 auto 40px;
 }
+.form-stepper__step3{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .form-stepper {
   display: flex;
   flex-direction: column;
@@ -226,11 +230,12 @@ select {
   align-items: center;
 }
 .cars_map div:focus {
-  color: #01c38d;
-  background-color: #0c1437
+  color: #355c7d;
+  background-color: #ffeba7;
+  box-shadow: 0 0 15px 1px #ffeba7;
 }
 .cars_map div:hover {
-  color: #01c38d;
+  color: #355c7d;
 }
 .form-stepper__body {
   min-height: 50px;
@@ -253,11 +258,7 @@ select {
   width: 100%;
   border-radius: 5px;
 }
-.completed {
-  color: #fff;
-  background-color: #01c38d;
-  box-shadow: 0 0 15px #01c38d;
-}
+
 .txt {
   font-size: 26px;
   color: #fff;
@@ -286,7 +287,7 @@ select {
   width: 60%;
 }
 .form-stepper__action {
-  width: 50%;
+  width: 70%;
   margin: 20px auto;
 }
 .form-stepper__action {
@@ -299,7 +300,7 @@ select {
 .form-stepper__step3 h2 {
   color: #fff;
   width: max-content;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 .form-stepper__body{
   width: 100%;
@@ -324,4 +325,14 @@ select {
 }
 .requestbody {
   margin-top: 20px;
+}
+.completed{
+  background-color: #01c38d;
+  box-shadow: 0 0 15px #01c38d;
+}
+.completed h2{
+  color: #fff !important;
+}
+.close{
+  opacity: 0;
 }

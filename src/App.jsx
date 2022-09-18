@@ -3,10 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import Main from "./pages/MainPage/Main";
 import Footer from "./components/Footer/Footer";
 import UserPage from "./pages/UserPage/UserPage";
-import FormRegistration from "./pages/FormRegistration/FormRegistration";
 import About from "./pages/About/About";
 import CarsPage from "./pages/CarsPage/CarsPage";
 import OneCar from "./pages/OneCar/OneCar";
+import FormRegistration from "./pages/FormRegistration/FormRegistration";
 
 function App() {
   return (
