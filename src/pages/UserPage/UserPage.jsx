@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import User from "../../components/User/User";
 import styles from "./userpage.module.scss";
 import { Link, Navigate } from "react-router-dom";
-import RequestForm from "../requestForm/RequestForm";
+import RequestForm from "../RequestForm/RequestForm";
 
 const UserPage = () => {
   const [path, setPath] = useState("user");
