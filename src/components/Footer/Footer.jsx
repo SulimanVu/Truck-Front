@@ -9,15 +9,15 @@ const Footer = () => {
     <footer>
       <div className={styles.general}>
         <div className={styles.logo}>
-          <img src={logo} />
+          <img alt="#y" src={logo} />
           <p>TruckCompany</p>
         </div>
         <div className={styles.location}>
-          <img src={loc} />
+          <img alt="#" src={loc} />
           <p>364001,Грозный, ул. Трошева 14</p>
         </div>
         <div className={styles.contact}>
-          <img src={phone} />
+          <img alt="#" src={phone} />
           <p>+79380877887 +78767483922</p>
         </div>
       </div>

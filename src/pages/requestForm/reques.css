@@ -312,7 +312,7 @@ select {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 20px auto;
 }
 .car{
   width: 80%;

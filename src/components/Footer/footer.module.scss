@@ -2,7 +2,7 @@ footer {
   width: 100%;
   background: rgba(181, 181, 184, 0.344);
   border-top: 1px solid #999;
-
+  position: relative;
   .general {
     // margin-left: 35%;
     display: flex;
@@ -60,6 +60,9 @@ footer {
   }
 
   .dno {
+    position: absolute;
+    top: 20%;
+    left: 45%;
     justify-content: center;
     flex-direction: column;
     text-align: center;
