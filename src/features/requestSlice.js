@@ -65,7 +65,7 @@ const requestSlice = createSlice({
         state.request = action.payload;
       })
       .addCase(addRequest.fulfilled, (state, action) => {
-        state.request = action.payload;
+        state.request.push(action.payload);
       });
   },
 });
