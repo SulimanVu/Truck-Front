@@ -2,9 +2,12 @@ import React, { useEffect } from "react";
 import styles from "./request.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchRequest } from "../../features/requestSlice";
+import { deleteRequest, fetchRequest } from "../../features/requestSlice";
 import { motion } from "framer-motion";
 import Staticmap from "./Staticmap";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Request = () => {
   const { id } = useParams();
@@ -13,17 +16,32 @@ const Request = () => {
 
   useEffect(() => {
     dispatch(fetchRequest());
-  }, []);
+  }, [dispatch]);
 
   const request = useSelector((state) =>
     state.request.request.filter((item) => {
       return item.user === id;
     })
   );
+
+  const handleDelete = (id) => {
+    toast.success('Ваша заявка отменена...', {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      })
+    dispatch(deleteRequest(id))
+
+  }
   
 
   return (
     <div>
+      <ToastContainer limit={1}/>
       {request.map((item, index) => {
         return (
           <div className={styles.request} key={index}>
@@ -35,6 +53,7 @@ const Request = () => {
             >
               <div className={styles.text}>
                 <div>Заявка №&ensp;{index + 1}</div>
+                <div className={styles.delete}><button onClick={() => handleDelete(item._id)}>x</button></div>
                 <div><span>Водитель :</span>&ensp; {item.car.name}</div>
                 <div><span>Номер для связи :</span>&ensp; {item.car.phone}</div>
                 <div><span>Ваша машина :</span>&ensp; {item.car.model}</div>
@@ -45,6 +64,7 @@ const Request = () => {
                 <div>
                   К оплате :&ensp; {item.price} <span>₽</span>
                 </div>
+                <div className={styles.pay}><button>Оплатить</button></div>
               </div>
               <div className={styles.img}>
                 {/* Возможно и здесь будет карта */}

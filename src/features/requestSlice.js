@@ -51,6 +51,17 @@ export const addRequest = createAsyncThunk(
   }
 );
 
+export const deleteRequest = createAsyncThunk(
+  'delete/request',
+  async (id, thunkAPU) => {
+    const response = await fetch(`http://localhost:3030/request/${id}`, {
+      method: 'DELETE',
+    })
+    const data = response.json()
+    return data
+  }
+)
+
 const requestSlice = createSlice({
   name: "request",
   initialState,
@@ -66,7 +77,10 @@ const requestSlice = createSlice({
       })
       .addCase(addRequest.fulfilled, (state, action) => {
         state.request.push(action.payload);
-      });
+      })
+      .addCase(deleteRequest.fulfilled, (state, action) => {
+        state.request = state.request.filter(item => item._id !== action.payload._id)
+      })
   },
 });
 
