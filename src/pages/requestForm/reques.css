@@ -298,3 +298,6 @@ select {
   width: max-content;
   margin: 20px auto;
 }
+.form-stepper__body{
+  width: 100%;
+}

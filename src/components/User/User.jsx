@@ -19,9 +19,9 @@ const User = () => {
     <div className={styles.main}>
       {user.map((item, index) => {
         return (
-          <>
-            <div className={styles.img} key={index}></div>
-            <div className={styles.text} key={index+100}>
+          <div className={styles.outfit} key={index}>
+            <div className={styles.img}></div>
+            <div className={styles.text}>
               <div>
                 <span>Имя пользователя:</span>&nbsp;&nbsp;{item.name}
               </div>
@@ -32,7 +32,7 @@ const User = () => {
                 <span>E-mail:</span>&nbsp;&nbsp;{item.mail}
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

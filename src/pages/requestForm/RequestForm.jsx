@@ -98,9 +98,10 @@ const RequestForm = () => {
                     <h2>Выберите приглядевшуюся вам машину</h2>
                   </div>
                   <div className="cars_map">
-                    {cars.map((item) => {
+                    {cars.map((item, index) => {
                       return (
                         <div
+                          key={index}
                           className="car"
                           onClick={() => handleCar(item._id)}
                         >

@@ -41,9 +41,11 @@ const CarsPage = () => {
         </h1>
         <div className={styles.categoryBlock}>
           <Link to='/cars' className={styles.links}>Все</Link>
-          {categories.map((item) => {
+          {categories.map((item, index) => {
             return (
-              <div className={styles.link_blog}>
+              <div 
+              key={index}
+              className={styles.link_blog}>
                 <Link
                   className={styles.links}
                   key={item._id}
@@ -57,9 +59,10 @@ const CarsPage = () => {
         </div>
         <div className={styles.cards}>
           {filterCars.length ? (
-            filterCars.map((item) => {
+            filterCars.map((item, index) => {
               return (
                 <motion.div
+                  key={index}
                   transition={{ duration: 2 }}
                   initial={{ opacity: 0, y: 100 }}
                   whileInView={{ opacity: 1, y: 0 }}
