@@ -40,7 +40,6 @@ const Request = () => {
   };
 
   const handlePay = (id) => {
-    console.log(id)
     setCard(false)
     dispatch(updateRequest(id))
   }
