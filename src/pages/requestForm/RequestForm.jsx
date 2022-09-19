@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequest } from "../../features/requestSlice";
 import "./reques.css";
-import headerForm from "./headerForm";
+import Headerform from './Headerform'
 import Map from "../../components/Map/Map";
 import { useParams } from "react-router-dom";
 import { fetchUser } from "../../features/userSlice";
@@ -107,7 +107,7 @@ const RequestForm = ({setAlert}) => {
     <>
       <ToastContainer limit={1} />
       <div className="requestbody">
-        <headerForm step={step} onStepChange={onStepChange} />
+        <Headerform step={step} onStepChange={onStepChange}/>
         <div className="form-stepper">
           <div className="onboarding__right">
             {
