@@ -7,6 +7,7 @@
     margin-top: 10px;
     width: 15%;
     color: #fff;
+    position: relative;
     div {
       margin-bottom: 2px;
       font-weight: 500;
@@ -31,10 +32,35 @@
       text-decoration: none;
       color: #fff;
     }
+
   }
   .request {
     width: 90%;
     min-height: 100vh;
     margin: 0 auto;
   }
+}
+
+.alert {
+  position: absolute!important;
+  line-height: 0!important;
+  margin: 0!important;
+  font-weight:100!important;
+  padding: 0.1px!important;
+  top: 90px!important;
+  left: -10px!important;
+  border: 0.5px solid #fff!important;
+  border-radius: 50%!important;
+  width: 20px!important;
+  height: 20px!important;
+  color: white!important;
+  text-align: center!important;
+  background-color: rgb(181, 9, 9)!important;
+  box-shadow: none!important;
+  transition: 0.4s;
+}
+
+.alertoff {
+  transition: 0.4s;
+  display: none!important;
 }

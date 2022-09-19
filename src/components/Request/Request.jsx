@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./request.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { deleteRequest, fetchRequest } from "../../features/requestSlice";
+import { deleteRequest, fetchRequest, updateRequest } from "../../features/requestSlice";
 import { motion } from "framer-motion";
 import Staticmap from "../Map/Staticmap";
 
@@ -38,6 +38,11 @@ const Request = () => {
     });
     dispatch(deleteRequest(id));
   };
+
+  const handlePay = (id) => {
+    setCard(false)
+    dispatch(updateRequest(id))
+  }
 
   return (
     <>
@@ -79,11 +84,15 @@ const Request = () => {
                     <div>
                       <span>Вес груза :</span>&ensp; {item.kg} кг
                     </div>
-                    <div>
-                      К оплате :&ensp; {item.price} <span>₽</span>
-                    </div>
+                    {item.payed ? 
+
+                        (<div> Товар оплачен :&ensp;<span>Ожидайте, водитель лично свяжется с вами, чтобы обсудить детали.</span></div>) 
+                        : 
+                        (<div>К оплате :&ensp; {item.price} <span>₽</span></div>)
+                        }
+
                     <div className={styles.pay}>
-                      <button onClick={() => setCard(false)}>Оплатить</button>
+                     {item.payed ? null: <button onClick={() => handlePay(item._id)}>Оплатить</button>}
                     </div>
                   </div>
                   <div className={styles.img}>
@@ -96,7 +105,7 @@ const Request = () => {
           })}
         </div>
       ) : (
-        <Card />
+        <Card setCard={setCard} />
       )}
     </>
   );

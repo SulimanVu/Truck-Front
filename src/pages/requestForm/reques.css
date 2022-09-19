@@ -202,13 +202,13 @@ select {
 .car {
   height: 40px;
   background-color: #fff;
-  color: #55acee;
+  color: #01c38d;
 }
 .cars_div {
   margin-top: 20px;
   height: 30px;
   font-size: 24px;
-  color: #5755ee;
+  color: #f9faff;
   align-items: center;
   display: flex;
   cursor: default;
@@ -230,12 +230,12 @@ select {
   align-items: center;
 }
 .cars_map div:focus {
-  color: #355c7d;
-  background-color: #ffeba7;
-  box-shadow: 0 0 15px 1px #ffeba7;
+  color: #f9faff!important;
+  background-color: #01c38d;
+  box-shadow: 0 0 4px 1px #eeede9;
 }
 .cars_map div:hover {
-  color: #355c7d;
+  color: #55acee;
 }
 .form-stepper__body {
   min-height: 50px;
