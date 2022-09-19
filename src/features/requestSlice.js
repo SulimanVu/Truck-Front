@@ -87,20 +87,35 @@ const requestSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchRequest.fulfilled, (state, action) => {
-        state.request = action.payload;
-      })
-      .addCase(addRequest.fulfilled, (state, action) => {
-        state.request.push(action.payload);
-      })
-      .addCase(deleteRequest.fulfilled, (state, action) => {
-        state.request = state.request.filter(item => item._id !== action.payload._id)
-      })
-      .addCase(updateRequest.fulfilled, (state, action) => {
-        state.request.unshift(action.payload)
-      })
+    .addCase(fetchRequest.fulfilled, (state, action) => {
+      state.request = action.payload;
+    })
+    .addCase(addRequest.fulfilled, (state, action) => {
+      state.request.push(action.payload);
+      state.loader = false
+    })
+    .addCase(addRequest.pending, (state, action) => {
+      state.loader = true
+    })
+    .addCase(addRequest.rejected, (state, action) => {
+      state.loader =false
+    })
+    .addCase(deleteRequest.fulfilled, (state, action) => {
+      state.request = state.request.filter(item => item._id !== action.payload._id)
+      state.loader = false
+    })
+    .addCase(deleteRequest.pending, (state, action) => {
+      state.loader = true
+    })
+    .addCase(deleteRequest.rejected, (state, action) => {
+      state.loader = false
+    })
+    .addCase(updateRequest.fulfilled, (state, action) => {
+      state.request.unshift(action.payload)
+    })   
   },
 });
+
 
 export const { saveRoute } = requestSlice.actions;
 
