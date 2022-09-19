@@ -51,6 +51,21 @@ export const addRequest = createAsyncThunk(
   }
 );
 
+export const updateRequest = createAsyncThunk(
+  'update/request',
+  async (id , thunkAPI) => {
+    const response = await fetch(`http://localhost:3030/request/${id}`, {
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({payed: true}),
+    })
+    const data = response.json()
+    return data
+  })
+
+
 export const deleteRequest = createAsyncThunk(
   'delete/request',
   async (id, thunkAPU) => {
@@ -80,6 +95,9 @@ const requestSlice = createSlice({
       })
       .addCase(deleteRequest.fulfilled, (state, action) => {
         state.request = state.request.filter(item => item._id !== action.payload._id)
+      })
+      .addCase(updateRequest.fulfilled, (state, action) => {
+        state.request.unshift(action.payload)
       })
   },
 });
