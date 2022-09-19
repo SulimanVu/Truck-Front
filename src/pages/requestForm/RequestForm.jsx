@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequest } from "../../features/requestSlice";
 import "./reques.css";
-import Headerform from './Headerform'
+import Headerform from "./Headerform";
 import Map from "../../components/Map/Map";
 import { useParams } from "react-router-dom";
 import { fetchUser } from "../../features/userSlice";
@@ -11,7 +11,7 @@ import { fetchCar } from "../../features/carSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const RequestForm = ({setAlert}) => {
+const RequestForm = ({ setAlert }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -62,7 +62,6 @@ const RequestForm = ({setAlert}) => {
   };
 
   const handleAddRequest = () => {
-
     toast.success("Ваша заявка отправлена на рассмотрение...", {
       position: "top-center",
       autoClose: 1500,
@@ -73,9 +72,9 @@ const RequestForm = ({setAlert}) => {
       progress: undefined,
     });
     setTimeout(() => {
-      setAlert(true)
-    }, 3000)
-    
+      setAlert(true);
+    }, 3000);
+
     const km = (route.summary.totalDistance / 1000).toFixed(1);
 
     const waypoint1 = JSON.parse(route.waypoint1);
@@ -99,15 +98,13 @@ const RequestForm = ({setAlert}) => {
         km,
       })
     );
-
-   
   };
 
   return (
     <>
       <ToastContainer limit={1} />
       <div className="requestbody">
-        <Headerform step={step} onStepChange={onStepChange}/>
+        <Headerform step={step} onStepChange={onStepChange} />
         <div className="form-stepper">
           <div className="onboarding__right">
             {
@@ -144,6 +141,7 @@ const RequestForm = ({setAlert}) => {
                 <div className="input-group">
                   <label htmlFor="fullname">Ваше имя</label>
                   <input
+                    disabled={true}
                     value={user}
                     type="text"
                     placeholder={theUser[0].name}
@@ -155,6 +153,7 @@ const RequestForm = ({setAlert}) => {
                 <div className="input-group">
                   <label htmlFor="email">Email</label>
                   <input
+                    disabled={true}
                     value={email}
                     type="email"
                     required
@@ -166,6 +165,7 @@ const RequestForm = ({setAlert}) => {
                 <div className="input-group">
                   <label htmlFor="password">Телефон</label>
                   <input
+                    disabled={true}
                     value={phone}
                     type="password"
                     required
