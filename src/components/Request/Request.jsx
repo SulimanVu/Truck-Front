@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./request.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { deleteRequest, fetchRequest } from "../../features/requestSlice";
+import { deleteRequest, fetchRequest, updateRequest } from "../../features/requestSlice";
 import { motion } from "framer-motion";
 import Staticmap from "../Map/Staticmap";
 
@@ -39,6 +39,12 @@ const Request = () => {
     dispatch(deleteRequest(id));
   };
 
+  const handlePay = (id) => {
+    console.log(id)
+    setCard(false)
+    dispatch(updateRequest(id))
+  }
+
   return (
     <>
       {card ? (
@@ -58,16 +64,37 @@ const Request = () => {
                     <div className={styles.delete}>
                       <button onClick={() => handleDelete(item._id)}>x</button>
                     </div>
-                    <div><span>Водитель :</span>&ensp; {item.car.name}</div>
-                    <div><span>Номер для связи :</span>&ensp; {item.car.phone}</div>
-                    <div><span>Ваша машина :</span>&ensp; {item.car.model}</div>
-                    <div><span>Отправка от :</span>&ensp; {item.from}</div>
-                    <div><span>Прибытие товара в :</span>&ensp; {item.to}</div>
-                    <div><span>Общее растояние :</span>&ensp; {item.km} км</div>
-                    <div><span>Вес груза :</span>&ensp; {item.kg} кг</div>
-                    <div>К оплате :&ensp; {item.price} <span>₽</span></div>
+                    <div>
+                      <span>Водитель :</span>&ensp; {item.car.name}
+                    </div>
+                    <div>
+                      <span>Номер для связи :</span>&ensp; {item.car.phone}
+                    </div>
+                    <div>
+                      <span>Ваша машина :</span>&ensp; {item.car.model}
+                    </div>
+                    <div>
+                      <span>Отправка от :</span>&ensp; {item.from}
+                    </div>
+                    <div>
+                      <span>Прибытие товара в :</span>&ensp; {item.to}
+                    </div>
+                    <div>
+                      <span>Общее растояние :</span>&ensp; {item.km} км
+                    </div>
+                    <div>
+                      <span>Вес груза :</span>&ensp; {item.kg} кг
+                    </div>
+
+                    {item.payed ? 
+
+                        (<div> Товар оплачен :&ensp;<span>Ожидайте, водитель лично свяжется с вами, чтобы обсудить детали.</span></div>) 
+                        : 
+                        (<div>К оплате :&ensp; {item.price} <span>₽</span></div>)
+                        }
+
                     <div className={styles.pay}>
-                      <button onClick={() => setCard(false)}>Оплатить</button>
+                     {item.payed ? null: <button onClick={() => handlePay(item._id)}>Оплатить</button>}
                     </div>
                   </div>
                   <div className={styles.img}>
@@ -80,7 +107,7 @@ const Request = () => {
           })}
         </div>
       ) : (
-        <Card />
+        <Card setCard={setCard} />
       )}
     </>
   );

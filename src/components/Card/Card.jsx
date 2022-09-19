@@ -3,26 +3,38 @@ import "react-credit-cards-2/lib/styles.scss";
 import Cards from "react-credit-cards-2";
 import { useState } from "react";
 import styles from './card.module.scss'
-
 import {
   formatCreditCardNumber,
   formatCVC,
   formatExpirationDate,
 } from "./utils";
 
-const Card = () => {
+
+const Card = ({setCard}) => {
+
   const [cvc, setCvc] = useState("");
   const [expiry, setExpiry] = useState("");
   const [focus, setFocus] = useState("");
   const [name, setName] = useState("");
   const [number, setNumber] = useState("4455 **** **** ****");
 
+  const [error, setError] = useState(false)
+
   const handleSubmit = () => {
-    setCvc("");
-    setExpiry("");
-    setFocus("");
-    setName("");
-    setNumber("");
+
+    if( name && cvc.length === 3 && number.length === 19 && expiry.length === 5) {
+      setCard(true)
+      setCvc("");
+      setExpiry("");
+      setFocus("");
+      setName("");
+      setNumber("");
+      setError(false)
+    } else {
+      console.log(cvc.length , expiry.length , number.length)
+      setError(true)
+    }
+    
   };
 
   const handleInputChange = ({ target }) => {
@@ -77,7 +89,7 @@ const Card = () => {
               type="text"
               name="expiry"
               placeholder="MM/YY"
-              maxLength={6}
+              maxLength={5}
               pattern="\d\d/\d\d"
               value={expiry}
               required
@@ -97,9 +109,13 @@ const Card = () => {
             />
           </div>
         </form>
+        {error ? <div> Заполните все поля! </div> : null}
         <button onClick={() => handleSubmit()}>Pay</button>
     </div>
   );
 };
 
 export default Card;
+
+
+// TODO  {error ? <div> Заполните все поля! </div> : null}
