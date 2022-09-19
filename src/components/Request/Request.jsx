@@ -84,7 +84,6 @@ const Request = () => {
                     <div>
                       <span>Вес груза :</span>&ensp; {item.kg} кг
                     </div>
-
                     {item.payed ? 
 
                         (<div> Товар оплачен :&ensp;<span>Ожидайте, водитель лично свяжется с вами, чтобы обсудить детали.</span></div>) 

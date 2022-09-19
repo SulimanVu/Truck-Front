@@ -43,17 +43,26 @@ body::-webkit-scrollbar-thumb {
     .btn_block {
       margin-top: 20px;
       display: flex;
-      width: 60%;
+      width: 65%;
       justify-content: space-between;
       align-self: flex-start;
+      .btn_profile {
+        button {
+          text-transform: uppercase;
+          color: black;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+        }
+      }
       button {
+        font-family: "Montserrat", sans-serif;
+        color: black;
         border: transparent;
         cursor: pointer;
         padding: 10px 15px;
         transition: 0.2s;
         &:hover {
           border: none;
-
           background-color: #355c7d;
           color: #fff;
         }

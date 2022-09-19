@@ -3,8 +3,11 @@ import styles from "./main.module.scss";
 import MainBlock from "../../components/MainBlocks/MainBlock";
 import HeaderMain from "../../components/HeaderMain/HeaderMain";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Main = () => {
+  const id = useSelector(state => state.application.userId)
   return (
     <>
       <HeaderMain />
@@ -34,8 +37,8 @@ const Main = () => {
             animate={{ opacity: [0, 0, 0, 0.6, 0.8, 1], y: 0 }}
             className={styles.btn_block}
           >
-            <button>ОФОРМИТЬ ЗАЯВКУ</button>
-            <button>СФОРМИРОВАТЬ ЦЕНУ</button>
+            <Link to={`/user/${id}`} className={styles.btn_profile}><button>Оформить заявку</button></Link>
+            <Link to={`/user/${id}`} className={styles.btn_profile}><button>Сформировать цену</button></Link>
           </motion.div>
         </div>
       </section>
