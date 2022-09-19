@@ -131,7 +131,7 @@ label {
   width: fit-content;
   margin: 0 auto 40px;
 }
-.form-stepper__step3{
+.form-stepper__step3 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -213,7 +213,7 @@ select {
   display: flex;
   cursor: default;
 }
-.cars_div h2{
+.cars_div h2 {
   color: #fff;
 }
 .cars_map {
@@ -230,7 +230,7 @@ select {
   align-items: center;
 }
 .cars_map div:focus {
-  color: #f9faff!important;
+  color: #f9faff !important;
   background-color: #01c38d;
   box-shadow: 0 0 4px 1px #eeede9;
 }
@@ -244,7 +244,7 @@ select {
   width: 50%;
   margin: 50px auto;
 }
-.form-stepper__step1 h2{
+.form-stepper__step1 h2 {
   color: #fff;
 }
 .input-group {
@@ -302,10 +302,10 @@ select {
   width: max-content;
   margin: 0 auto;
 }
-.form-stepper__body{
+.form-stepper__body {
   width: 100%;
 }
-.requestbody{
+.requestbody {
   padding-top: 20px;
   background: #355c7d;
   border-radius: 10px;
@@ -313,26 +313,38 @@ select {
   flex-direction: column;
   margin: 20px auto;
 }
-.car{
+.car {
   width: 80%;
   margin: auto;
 }
-.input-group label{
+.input-group label {
   color: #fff;
 }
-.userpage_request{
+.userpage_request {
   margin-top: 40px !important;
 }
 .requestbody {
   margin-top: 20px;
 }
-.completed{
+.completed {
   background-color: #01c38d;
   box-shadow: 0 0 15px #01c38d;
 }
-.completed h2{
+.completed h2 {
   color: #fff !important;
 }
-.close{
+.close {
   opacity: 0;
+}
+.input-group input[type="text"]:disabled {
+  font-size: 18px;
+  background: rgb(197, 192, 192);
+}
+.input-group input[type="password"]:disabled {
+  font-size: 18px;
+  background: rgb(197, 192, 192);
+}
+.input-group input[type="email"]:disabled {
+  font-size: 18px;
+  background: rgb(197, 192, 192);
 }

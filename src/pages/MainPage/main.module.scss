@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
     .btn_block {
       margin-top: 20px;
       display: flex;
-      width: 65%;
+      width: 70%;
       justify-content: space-between;
       align-self: flex-start;
       .btn_profile {
@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
         color: black;
         border: transparent;
         cursor: pointer;
-        padding: 10px 15px;
+        padding: 15px 20px;
         transition: 0.2s;
         &:hover {
           border: none;
