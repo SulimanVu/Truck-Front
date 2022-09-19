@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { authSignIn } from "../../features/applicationSlice";
 import styles from "../Registr/signup.module.scss";
 
 const SignIn = () => {
+  const navigate = useNavigate()
+
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [text, setText] = useState(true);
@@ -25,6 +28,8 @@ const SignIn = () => {
     setPassword("");
     setLogin("");
     dispatch(authSignIn({ login, password }));
+    navigate('/')
+    window.location.reload()
   };
 
   const handleClick = () => {

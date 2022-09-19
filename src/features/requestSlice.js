@@ -52,30 +52,30 @@ export const addRequest = createAsyncThunk(
 );
 
 export const updateRequest = createAsyncThunk(
-  'update/request',
-  async (id , thunkAPI) => {
+  "update/request",
+  async (id, thunkAPI) => {
     const response = await fetch(`http://localhost:3030/request/${id}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({payed: true}),
-    })
-    const data = response.json()
-    return data
-  })
-
+      body: JSON.stringify({ payed: true }),
+    });
+    const data = await response.json();
+    return data;
+  }
+);
 
 export const deleteRequest = createAsyncThunk(
-  'delete/request',
+  "delete/request",
   async (id, thunkAPU) => {
     const response = await fetch(`http://localhost:3030/request/${id}`, {
-      method: 'DELETE',
-    })
-    const data = response.json()
-    return data
+      method: "DELETE",
+    });
+    const data = response.json();
+    return data;
   }
-)
+);
 
 const requestSlice = createSlice({
   name: "request",
@@ -87,35 +87,44 @@ const requestSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    .addCase(fetchRequest.fulfilled, (state, action) => {
-      state.request = action.payload;
-    })
-    .addCase(addRequest.fulfilled, (state, action) => {
-      state.request.push(action.payload);
-      state.loader = false
-    })
-    .addCase(addRequest.pending, (state, action) => {
-      state.loader = true
-    })
-    .addCase(addRequest.rejected, (state, action) => {
-      state.loader =false
-    })
-    .addCase(deleteRequest.fulfilled, (state, action) => {
-      state.request = state.request.filter(item => item._id !== action.payload._id)
-      state.loader = false
-    })
-    .addCase(deleteRequest.pending, (state, action) => {
-      state.loader = true
-    })
-    .addCase(deleteRequest.rejected, (state, action) => {
-      state.loader = false
-    })
-    .addCase(updateRequest.fulfilled, (state, action) => {
-      state.request.unshift(action.payload)
-    })   
+      .addCase(fetchRequest.fulfilled, (state, action) => {
+        state.request = action.payload;
+      })
+      .addCase(addRequest.fulfilled, (state, action) => {
+        state.request.push(action.payload);
+        state.loader = false;
+      })
+      .addCase(addRequest.pending, (state, action) => {
+        state.loader = true;
+      })
+      .addCase(addRequest.rejected, (state, action) => {
+        state.loader = false;
+      })
+      .addCase(deleteRequest.fulfilled, (state, action) => {
+        state.request = state.request.filter(
+          (item) => item._id !== action.payload._id
+        );
+        state.loader = false;
+      })
+      .addCase(deleteRequest.pending, (state, action) => {
+        state.loader = true;
+      })
+      .addCase(deleteRequest.rejected, (state, action) => {
+        state.loader = false;
+      })
+      .addCase(updateRequest.fulfilled, (state, action) => {
+        state.request = state.request.map((item) => {
+          if (item._id === action.payload._id) {
+            return {
+              ...item,
+              payed: true,
+            };
+          }
+          return item;
+        });
+      });
   },
 });
-
 
 export const { saveRoute } = requestSlice.actions;
 
