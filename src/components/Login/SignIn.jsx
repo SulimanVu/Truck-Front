@@ -29,7 +29,6 @@ const SignIn = () => {
     setLogin("");
     dispatch(authSignIn({ login, password }));
     navigate('/')
-    window.location.reload()
   };
 
   const handleClick = () => {
