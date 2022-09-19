@@ -58,14 +58,30 @@ const Request = () => {
                     <div className={styles.delete}>
                       <button onClick={() => handleDelete(item._id)}>x</button>
                     </div>
-                    <div><span>Водитель :</span>&ensp; {item.car.name}</div>
-                    <div><span>Номер для связи :</span>&ensp; {item.car.phone}</div>
-                    <div><span>Ваша машина :</span>&ensp; {item.car.model}</div>
-                    <div><span>Отправка от :</span>&ensp; {item.from}</div>
-                    <div><span>Прибытие товара в :</span>&ensp; {item.to}</div>
-                    <div><span>Общее растояние :</span>&ensp; {item.km} км</div>
-                    <div><span>Вес груза :</span>&ensp; {item.kg} кг</div>
-                    <div>К оплате :&ensp; {item.price} <span>₽</span></div>
+                    <div>
+                      <span>Водитель :</span>&ensp; {item.car.name}
+                    </div>
+                    <div>
+                      <span>Номер для связи :</span>&ensp; {item.car.phone}
+                    </div>
+                    <div>
+                      <span>Ваша машина :</span>&ensp; {item.car.model}
+                    </div>
+                    <div>
+                      <span>Отправка от :</span>&ensp; {item.from}
+                    </div>
+                    <div>
+                      <span>Прибытие товара в :</span>&ensp; {item.to}
+                    </div>
+                    <div>
+                      <span>Общее растояние :</span>&ensp; {item.km} км
+                    </div>
+                    <div>
+                      <span>Вес груза :</span>&ensp; {item.kg} кг
+                    </div>
+                    <div>
+                      К оплате :&ensp; {item.price} <span>₽</span>
+                    </div>
                     <div className={styles.pay}>
                       <button onClick={() => setCard(false)}>Оплатить</button>
                     </div>

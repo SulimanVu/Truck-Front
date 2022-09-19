@@ -10,10 +10,8 @@ export function formatCreditCardNumber(value) {
   }
 
   const clearValue = clearNumber(value);
-  console.log(clearValue);
 
   let nextValue = `${clearValue.slice(0, 4)} ${clearValue.slice(4,8)} ${clearValue.slice(8, 12)} ${clearValue.slice(12, 16)}`;
-    console.log(nextValue)
   return nextValue.trim();
 }
 

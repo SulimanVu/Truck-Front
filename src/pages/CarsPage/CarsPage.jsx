@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import styles from "../CarsPage/cars.module.scss";
 import { fetchCar } from "../../features/carSlice";
@@ -15,7 +15,6 @@ const CarsPage = () => {
   const categories = useSelector((state) => state.category.category);
 
   const { id } = useParams();
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     dispatch(fetchCar());
@@ -28,9 +27,6 @@ const CarsPage = () => {
     }
     return id === item.category._id;
   });
-  //   const filtered = filterCars.filter((item) => {
-  //     return item.name.toLowerCase().includes(search.toLowerCase())
-  //   })
 
   return (
     <div>
@@ -40,12 +36,12 @@ const CarsPage = () => {
           <span>НАШ АВТОПАРК</span>
         </h1>
         <div className={styles.categoryBlock}>
-          <Link to='/cars' className={styles.links}>Все</Link>
+          <Link to="/cars" className={styles.links}>
+            Все
+          </Link>
           {categories.map((item, index) => {
             return (
-              <div 
-              key={index}
-              className={styles.link_blog}>
+              <div key={index} className={styles.link_blog}>
                 <Link
                   className={styles.links}
                   key={item._id}
@@ -90,7 +86,6 @@ const CarsPage = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

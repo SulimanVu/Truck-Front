@@ -64,7 +64,7 @@ const SignIn = () => {
             />
 
             <button type="submit" className={styles.btn}>
-              АВТОРИЗАЦИЯ
+              ВХОД
             </button>
           </form>
         </div>
