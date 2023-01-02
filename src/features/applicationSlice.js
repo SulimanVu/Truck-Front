@@ -61,7 +61,6 @@ const applicationSlice = createSlice({
   extraReducers: (builder) => {
     builder
     .addCase(authSignIn.fulfilled, (state, action) => {
-      console.log(action.payload)
       state.token = action.payload.token;
       state.userId = action.payload.id;
     })

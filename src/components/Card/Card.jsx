@@ -31,7 +31,6 @@ const Card = ({setCard}) => {
       setNumber("");
       setError(false)
     } else {
-      console.log(cvc.length , expiry.length , number.length)
       setError(true)
     }
     

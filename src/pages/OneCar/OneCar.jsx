@@ -16,8 +16,6 @@ const OneCar = () => {
         return id === item._id
     }))
 
-    console.log(car);
-
     const dispatch = useDispatch()
 
     useEffect(()=> {
