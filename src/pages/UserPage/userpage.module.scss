@@ -1,0 +1,66 @@
+.user_block {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  background-color: #1f2029;
+  .aside {
+    margin-top: 10px;
+    width: 15%;
+    color: #fff;
+    position: relative;
+    div {
+      margin-bottom: 2px;
+      font-weight: 500;
+      height: 50px;
+      border-bottom: 1px solid silver;
+      border-top: 1px solid silver;
+      border-left: 0.5px solid silver;
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 3px;
+      line-height: 50px;
+      padding-left: 15px;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: #355c7d;
+        color: #01c38d;
+        box-shadow: -2px 3px 3px rgb(14, 132, 161);
+      }
+    }
+    .Link {
+      font-weight: 300;
+      text-decoration: none;
+      color: #fff;
+    }
+
+  }
+  .request {
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+}
+
+.alert {
+  position: absolute!important;
+  line-height: 0!important;
+  margin: 0!important;
+  font-weight:100!important;
+  padding: 0.1px!important;
+  top: 90px!important;
+  left: -10px!important;
+  border: 0.5px solid #fff!important;
+  border-radius: 50%!important;
+  width: 20px!important;
+  height: 20px!important;
+  color: white!important;
+  text-align: center!important;
+  background-color: rgb(181, 9, 9)!important;
+  box-shadow: none!important;
+  transition: 0.4s;
+}
+
+.alertoff {
+  transition: 0.4s;
+  display: none!important;
+}

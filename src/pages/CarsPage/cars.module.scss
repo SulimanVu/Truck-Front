@@ -1,110 +1,133 @@
 .wrapper {
-    background-image: url('../../public/two_bg.jpg');
-    width: 100%;
-    align-items: center;
+  background-image: url("../../public/two_bg.jpg");
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
 }
 .wrapper span {
-    font-size: 31px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    color: black;
-    opacity: 0.6;
-    line-height: 1.35em;
+  font-size: 31px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #355c7d;
+  margin: 20px;
 }
 
 .headline {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Настройка цвета и прозрачности для блока с заголовком */
-    transition: background 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease;
 }
 .onecard img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .onecard:hover .headline {
-display: block;
-background: rgba(0, 0, 0, 0.75);
+  display: block;
+  background: rgba(0, 0, 0, 0.75);
 }
 .title {
-    position: absolute;
+  position: absolute;
   width: 100%;
   left: 0;
   top: 25%;
-  font-size: 1.900em; 
+  font-size: 1.9em;
   text-align: center;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   color: white;
   z-index: 1;
-  transition: top .5s ease;
+  transition: top 0.5s ease;
 }
 .cards {
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-start;
-width: 90%;
-margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+  .not_auto {
+    color: #355c7d;
+    margin: 15% auto 0;
+  }
 }
 .onecard {
-background-repeat: no-repeat;
-border-image-width: 500px;
-box-sizing: border-box;
-position: relative;
-width: 30%;
-height: 350px;
-margin: 10px 15px;
+  background-repeat: no-repeat;
+  border-image-width: 500px;
+  box-sizing: border-box;
+  position: relative;
+  width: 30%;
+  height: 350px;
+  margin: 10px 15px;
+  box-shadow: 5px 5px 5px silver;
 }
 .onecard:hover .title {
-    top: 10%;
+  top: 10%;
 }
 
 .btnSeeMore {
-    position: absolute;
-    width: 100%;
-    left:0;
-    top: 75%; 
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 75%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
-  .btnSeeMore a {
-    border-radius: 4px;
-    background-color: #1874c1;
-    color: #ffffff;
-    background: linear-gradient(to top, #1874c1, #0b7b8f);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
-    color: #ffffff !important;
-    padding: 14px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-  }
-  .onecard:hover .btnSeeMore {
-    opacity: 1;
-    z-index: 1;
-  }
+.btnSeeMore a {
+  border-radius: 4px;
+  background-color: #1874c1;
+  color: #ffffff;
+  background: linear-gradient(to top, #1874c1, #0b7b8f);
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #ffffff !important;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.onecard:hover .btnSeeMore {
+  opacity: 1;
+  z-index: 1;
+}
 .categoryBlock {
-    display: flex;
-    border: 3px solid #999999bf;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 60%;
+  display: flex;
+  clip-path: polygon(
+    75% 0%,
+    80.49% 54.55%,
+    75% 100%,
+    0% 100%,
+    0% 55.64%,
+    0% 0%
+  );
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 70%;
 }
 .categoryBlock a {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    color: black;
-    border: 2px solid #999999bf;
-    
-    padding: 0;
-    display: block;
-    padding: 17px 19px;
-    box-sizing: border-box;
-    z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  padding: 17px 19px;
+  box-sizing: border-box;
+}
+.links {
+  color: #355c7d;
+  transition: 0.5s;
+  &:hover {
+    color: #01c38d;
+    scale: 1.03;
+  }
+  &:focus {
+    color: #01c38d;
+  }
 }
